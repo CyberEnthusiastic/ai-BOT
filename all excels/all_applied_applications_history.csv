@@ -1,0 +1,250 @@
+Job ID,Title,Company,Work Location,Work Style,About Job,Experience required,Skills required,HR Name,HR Link,Resume,Re-posted,Date Posted,Date Applied,Job Link,External Job link,Questions Found,Connect Request
+4368042285,DevSecOps Engineer,LTIMindtre,IMindtre,IMindtre,"About the job
+LTIMindtree is an equal opportunity employer that is committed to diversity in the workplace. Our employment decisions are made without regard to race, color, creed, religion, sex (including pregnancy, childbirth or related medical conditions), gender identity or expression, national origin, ancestry, age, family-care status, veteran status, marital status, civil union status, domestic partnership status, military service, handicap or disability or history of handicap or disability, genetic information, atypical hereditary cellular or blood trait, union affiliation, affectional or sexual orientation or preference, or any other characteristic protected by applicable federal, state, or local law, except where such considerations are bona fide occupational qualifications permitted by law.
+A little about us...
+ Role: Azure DevOps Engineer
+Location: Berkeley Heights, NJ
+
+Job Description:
+1. Extensive hands-on experience on GitHub Actions writing workflows in YAML using re-usable templates
+2. Extensive hands-on experience with application CI/CD pipelines both for Azure and on-prem for different frameworks
+3. Hands on experience with Azure DevOps and migration programs of CI/CD pipelines preferably from Azure DevOps to GitHub Actions
+4. Proficiency in integrating and consuming REST APIs to achieve automation through scripting
+5. Hands on experience with atleast 1 scripting language and has done out of box automations for platforms like People Soft, SharePoint, MDM etc
+6. Hands on experience with CI/CD of databases
+7. Good to have experience with infrastructure-as-code including ARM templates Terraform Azure CLI Azure PowerShell modules
+8. Exposure to monitoring tools like ELK Prometheus Grafana
+
+LTIMindtree is an equal opportunity employer that is committed to diversity in the workplace. Our employment decisions are made without regard to race, color, creed, religion, sex (including pregnancy, childbirth or related medical conditions), gender identity or expression, national origin, ancestry, age, family-care status, veteran status, marital status, civil union status, domestic partnership status, military service, handicap or disability or history of handicap or disability, genetic information, atypical hereditary cellular or blood trait, union affiliation, affectional or sexual orientation or preference, or any other characteristic protected by applicable federal, state, or local law, except where such considerations are bona fide occupational qualifications permitted by law.",0,"{'tech_stack': ['Python', 'GitHub Actions', 'YAML', 'Azure DevOps', 'Azure CLI', 'Azure PowerShell', 'Terraform', 'ARM templates', 'ELK Prometheus Grafana'], 'technical_skills': ['System Architecture', 'CI/CD pipelines', 'Database CI/CD', 'Microservices', 'Distributed Systems'], 'other_skills': ['Communication skills', 'Managerial roles', 'Cross-team collaboration', 'Leadership skills'], 'required_skills': ['Extensive hands-on experience with GitHub Actions writing workflows in YAML using re-usable templates', 'Proficiency in integrating and consuming REST APIs to achieve automation through scripting', 'Hands on experience with atleast 1 scripting language', 'Good to have experience with infrastructure-as-code including ARM templates Terraform Azure CLI Azure PowerShell modules'], 'nice_to_have': ['Experience with People Soft, SharePoint, MDM', 'Experience with CI/CD of databases', 'Experience with on-prem frameworks']}",Pankaj Kumar ,https://www.linkedin.com/in/pankaj-kumar-87187b81,Previous resume,True,2026-03-01 14:11:57.595844,2026-03-31 14:13:17.112911,https://www.linkedin.com/jobs/view/4368042285,Easy Applied,"{('Email address [  ""Select an option"", ""c_avasamsetti@costco.com"", ""vmna56@gmail.com"", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('how many years of work experience do you have with devsecops?', '5', 'text', '5'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Phone country code [ ""List of phone country codes"" ]', 'Yes', 'select', 'United States (+1)')}",In Development
+4384062976,Sr. IAM Security Engineer (PingFederate),The Judge Grou,e Judge Grou,e Judge Grou,"About the job
+Job Title: Sr. IAM Security Engineer (PingFederate)
+Locations: Hybrid in Southlake, TX; Austin, TX; or Phoenix, AZ (4 days a week onsite)
+Duration: 12-month contract to hire
+
+I am partnering with a leading technology organization to find a Senior Security Engineer to join their rapidly growing team. If you have a strong background in identity access management, network security, and threat detection, this is a great opportunity to take ownership of complex security infrastructure.
+
+Key Responsibilities
+Monitor new and emerging security threats from various industry sources
+Design and create product detection mechanisms based on emerging threat profiles
+Troubleshoot complex network issues using network traces while maintaining system assurance and reliability
+Work independently to drive security initiatives and communicate effectively with cross-functional teams
+
+Required Qualifications:
+5 to 8 years of overall engineering experience, with 2 to 5 years focused on security implementation
+Hands-on expertise with the Ping ecosystem, including Ping Federate, Ping ID, and Ping Access
+Strong working knowledge of containerization and orchestration using Docker and Kubernetes
+Solid foundation in Linux, VPNs, Intrusion Detection/Prevention Systems (IDS/IPS), and penetration testing
+Proven technical track record with network defense tools, including L2/L3 firewalls, application layer security, anti-virus, malcode tools, and DDOS mitigation
+Experience with traffic profiling, anomaly detection, wireless security, and VoIP security
+Bachelor's degree in Computer Science or a related technical field",5,"{'tech_stack': ['Ping Federate', 'Ping ID', 'Docker', 'Kubernetes', '.NET', 'Linux', 'VPN', 'IDS/IPS', 'anti-virus'], 'technical_skills': ['System Architecture', 'Network Security', 'Threat Detection', 'Containerization'], 'other_skills': ['Communication skills', 'Managerial roles'], 'required_skills': ['Strong working knowledge of Ping ecosystem', '.NET', 'Linux', 'VPN', 'IDS/IPS', 'Proven technical track record with network defense tools'], 'nice_to_have': []}",Gaurav Agrawal ,https://www.linkedin.com/in/gagrawal97,Previous resume,False,2026-03-17 14:13:32.312146,2026-03-31 14:14:27.626481,https://www.linkedin.com/jobs/view/4384062976,Easy Applied,"{('how many years of work experience do you have with cybersecurity?', '5', 'text', ''), ('Phone country code [ ""List of phone country codes"" ]', 'Yes', 'select', 'United States (+1)'), ('Email address [  ""Select an option"", ""c_avasamsetti@costco.com"", ""vmna56@gmail.com"", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('how many years of work experience do you have with identity and access management (iam)?', '5', 'text', ''), ('how many years of work experience do you have with pingfederate?', '5', 'text', '')}",In Development
+4376442402,"Physical Security Project Engineer - Reno, NV.",RedCloud Consultin,dCloud Consultin,dCloud Consultin,"About the job
+RedCloud Consulting is a business and IT consulting company with local Puget Sound Enterprise and Mid-sized clients. RedCloud seeks a Physical Security Project Engineer to support immediate client operations in the Reno NV. region.
+
+Overview:
+The Security Project Engineer serves as the dedicated owner’s representative for the physical security scope across data center construction projects. This role drives onsite coordination, ensures adherence to security design standards, and acts as the primary liaison between internal stakeholders, General Contractors (GCs), and Security Integrators (SIs). Each engineer will support 3–4 data center projects within a 60‑minute drive in a given metro.
+This role reports via dotted line to the site data center services team, partners closely with onsite project teams, and aligns with the regional client team for technical guidance.
+
+Responsibilities include but are not limited to:
+Pre‑Construction & Strategic Planning
+Develop and plan the security construction program with early engagement to enable smooth execution.
+Review A/E drawings, design standards, and related documents; provide expert guidance to GCs and SIs.
+Lead security kickoff meetings with all project stakeholders.
+Onsite Execution & Coordination
+Serve as the primary onsite point of contact for all physical security matters.
+Guide GCs and SIs to execute work in alignment with approved security designs.
+Facilitate coordination between security integrators and other trades (electrical, civil, networking, etc.) to resolve conflicts and maintain logical work sequencing.
+Participate in—and when needed, organize—regular onsite project meetings to track progress, address blockers, and report status to construction teams.
+Quality Assurance & Compliance
+Provide thorough reporting to the site construction manager to ensure all installations meet quality standards.
+Validate mock‑ups and subsequent field installations against drawings and design standards.
+Conduct comprehensive site validation using the SORT Checklist to determine turnover readiness.
+Issue Management & Communication
+Identify and document onsite issues proactively; collaborate with design teams and SMEs to develop improvement plans.
+Act as the central point for escalation of onsite security issues and RFIs, ensuring timely resolution.
+Commissioning & Project Closeout
+Drive Levels 2–4 of the security commissioning process, coordinating with SIs, third‑party commissioning agents, and internal teams.
+Own and manage the security punch list to ensure all deficiencies are corrected prior to system acceptance.
+Oversee the SORT closeout process to ensure complete and accurate documentation and smooth handover to SecOps.
+
+Role Structure & Geographic Requirements:
+Engineers will be deployed based on metro‑level project demand.
+Each assignment may require travel within a defined metropolitan region (typically within 60 minutes of project sites).
+Roles support multiple global regions, including APAC, EMEA, LATAM, and the U.S. (Central, East, and West).
+
+Required Knowledge, Skills, and Abilities:
+5+ years of experience in physical security systems, construction engineering, or a related field.
+Strong understanding of access control, video surveillance, intrusion detection, and related infrastructure.
+Experience coordinating cross‑functional construction teams.
+Ability to interpret A/E drawings and technical design standards.
+Excellent communication, problem‑solving, and issue‑management capabilities.
+Willingness to travel within assigned metro areas.
+
+Benefits and bonus information can be found at https://www.redcloudconsulting.com/careers
+RedCloud requires employees have the legal ability to work in the country hired during their employment period. During onboarding, proof of eligibility to work in the applicable country will be requested. RedCloud does not provide visa sponsorship.
+
+About Us:
+RedCloud is a boutique, business and technology consulting firm providing local companies with expert-level support for over two decades. Whether it’s to solve a specific business challenge or to provide additional support for an ambitious project, we can help bring even the most visionary endeavors to fruition.
+
+Anchored by a foundation of ""integrity-based consulting"", the RedCloud team of subject matter experts collaborate closely with clients to develop and implement high-level solutions, bringing stability, growth, and innovation together for long-term success. We provide a broad array of business and technology consulting services through RedCloud’s core practices: Data & AI, Delivery Excellence, Digital Solutions, Marketing & Sales, Privacy, Security, and Strategy & Transformation.
+
+Visit http://www.redcloudconsulting.com/ for more info.
+#LI-Hybrid/Onsite",5,"{'tech_stack': [], 'technical_skills': ['Construction Engineering', 'Access Control'], 'other_skills': ['Communication skills', 'Problem-solving capabilities', 'Issue-management capabilities', 'Cross-function collaboration', 'Leadership', 'Time management'], 'required_skills': ['Physical security systems', 'Construction engineering', 'Strong understanding of access control, video surveillance, intrusion detection, and related infrastructure.', 'Interpretation of A/E drawings and technical design standards', 'Excellent communication skills', 'Proactive problem-solving capabilities', 'Ability to manage issues'], 'nice_to_have': []}",John Gillespie ,https://www.linkedin.com/in/johnrgillespie,Previous resume,True,2026-03-10 14:14:39.401952,2026-03-31 14:15:42.710026,https://www.linkedin.com/jobs/view/4376442402,Easy Applied,"{('Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)? [  ""Yes""<Yes>, ""No""<No>, ]', '""Yes""<Yes>', 'radio', '""Yes""<Yes>'), ('how many years of work experience do you have with data center construction?', '5', 'text', ''), ('Phone country code [ ""List of phone country codes"" ]', 'Yes', 'select', 'United States (+1)'), ('Email address [  ""Select an option"", ""c_avasamsetti@costco.com"", ""vmna56@gmail.com"", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('Are you located in the Greater Reno area (1 hour of drive time)?  [  ""Select an option"", ""Yes"", ""No"", ]', 'Yes', 'select', 'Select an option'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Are you legally authorized to work in the United States? [  ""Yes""<Yes>, ""No""<No>, ]', '""Yes""<Yes>', 'radio', '""Yes""<Yes>')}",In Development
+4354014427,Software Engineer (DevOps),HCLTec,LTec,LTec,"About the job
+HCLTech is looking for a highly talented and self- motivated Python Developer to join it in advancing the technological world through innovation and creativity.
+
+Job Title: Software Engineer (DevOps)
+Job REQ ID: 69354
+Position Type: Full Time
+Location: Austin TX (Remote)
+
+Required skills:
+Hands on experience with DevOps & CI/CD technologies.
+Basic knowledge of what machine learning models are, and different types of algorithms.
+3+ years of hands-on experience with design, implementation, deployment, training, testing etc of one or more machine learning models.
+High level building blocks of AI implementation.
+
+Roles and responsibilities
+
+Good programming skills.
+Respond to and triage support questions and support requests from Client engineers
+Follow internally developed support processes and workflows
+Communicate and escalate issues to the proper engineering teams or owners for resolution as necessary
+Use Client’s tools to investigate problems and correlate them to release events or code rollouts
+Extract relevant information from log files and other sources to debug, identify owners or root causes
+Apply basic debugging techniques and relevant tools to clarify issues and add relevant information for owners
+Write basic tools and test cases to improve the speed and quality of support
+Work with technical writers to improve documentation in areas covered by support
+
+Preferred Attributes
+Basic SQL is a plus
+Linux
+
+Pay and Benefits
+Pay Range Minimum: $79000/annum
+Pay Range Maximum: $121000/annum
+
+HCLTech is an equal opportunity employer, committed to providing equal employment opportunities to all applicants and employees regardless of race, religion, sex, color, age, national origin, pregnancy, sexual orientation, physical disability or genetic information, military or veteran status, or any other protected classification, in accordance with federal, state, and/or local law. Should any applicant have concerns about discrimination in the hiring process, they should provide a detailed report of those concerns to secure@hcltech.com for investigation.
+
+A candidate’s pay within the range will depend on their skills, experience, education, and other factors permitted by law. This role may also be eligible for performance-based bonuses subject to company policies. In addition, this role is eligible for the following benefits subject to company policies: medical, dental, vision, pharmacy, life, accidental death & dismemberment, and disability insurance; employee assistance program; 401(k) retirement plan; 10 days of paid time off per year (some positions are eligible for need-based leave with no designated number of leave days per year); and 10 paid holidays per year
+
+How You’ll Grow
+At HCLTech, we offer continuous opportunities for you to find your spark and grow with us. We want you to be happy and satisfied with your role and to really learn what type of work sparks your brilliance the best. Throughout your time with us, we offer transparent communication with senior-level employees, learning and career development programs at every level, and opportunities to experiment in different roles or even pivot industries. We believe that you should be in control of your career with unlimited opportunities to find the role that fits you best",3,"{'tech_stack': ['Python', 'DevOps', 'CI/CD', 'Machine learning', 'SQL', 'Linux'], 'technical_skills': ['System Architecture', 'Design implementation', 'Training', 'Testing', 'Debugging', 'Algorithms'], 'other_skills': ['Communication skills', 'Managerial roles', 'Cross-team collaboration', 'Documentation'], 'required_skills': ['Hands on experience with DevOps & CI/CD technologies.', 'Basic knowledge of what machine learning models are, and different types of algorithms.'], 'nice_to_have': ['Build blocks of AI implementation.', 'Basic SQL', 'Linux']}",Unknown,Unknown,Previous resume,True,2026-03-01 14:16:11.147753,2026-03-31 14:16:58.560472,https://www.linkedin.com/jobs/view/4354014427,Easy Applied,"{('how much experience do you have...?', '5', 'text', ''), ('Are you fine for a coding interview..? [  ""Select an option"", ""Yes"", ""No"", ]', 'Yes', 'select', 'Select an option'), ('Phone country code [ ""List of phone country codes"" ]', 'Yes', 'select', 'United States (+1)'), ('Email address [  ""Select an option"", ""c_avasamsetti@costco.com"", ""vmna56@gmail.com"", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('Do you have strong coding experience in ..? [  ""Select an option"", ""Yes"", ""No"", ]', 'Yes', 'select', 'Select an option'), ('mobile phone number', '2542844847', 'text', '2542844847')}",In Development
+4392468174,Security Operations Engineer,Eliassen Grou,iassen Grou,iassen Grou,"About the job
+Description
+Hybrid 4 in either New York, NY or Pittsburgh, PA
+
+The organization seeks a Security Operations Engineer to strengthen and operate a FedRAMP-aligned Azure environment using native Microsoft security tooling. The role will design detections, run incident response, and drive continuous monitoring with audit-ready evidence across NIST SP 800-53 control families. The engineer will collaborate with cloud engineering, platform teams, and compliance stakeholders to sustain authorization and operational excellence. The position requires proficiency with Microsoft Sentinel, Defender for Cloud, Azure Policy, Entra ID, and KQL.
+
+This is a contract to hire opportunity. Applicants must be willing and able to work on a w2 basis and convert to FTE following contract duration. For our w2 consultants, we offer a great benefits package that includes Medical, Dental, and Vision benefits, 401k with company matching, and life insurance.
+
+Rate: $84.00 to $94.00/hr. w2
+
+Responsibilities
+Design, implement, and tune detections in Microsoft Sentinel, including analytic rules, workbooks, watchlists, and automation with Logic Apps and Playbooks.
+Build incident response runbooks and orchestration for triage, enrichment, and response using Sentinel automation.
+Maintain log onboarding pipelines, data connectors, and normalization in Log Analytics to ensure coverage for in-scope resources.
+Conduct daily SecOps functions including alert triage, investigation, threat hunting, containment, and post-incident reviews.
+Leverage Defender for Cloud, Defender for Cloud Apps, Entra ID Protection, and Microsoft Defender XDR signals to correlate and respond to threats.
+Document evidence and maintain audit-ready case records, contributing to POA&M entries and corrective actions.
+Manage misconfigurations and control enforcement using Defender for Cloud recommendations, Secure Score, and Azure Policy.
+Partner with platform engineering to remediate vulnerabilities and configuration drift, tracking closures against FedRAMP timelines.
+Maintain baseline guardrails via Azure Policy and Blueprints and monitor compliance and exceptions with Continuous Monitoring reporting.
+Implement and support least-privilege patterns with Entra ID, PIM, Conditional Access, RBAC, and managed identities.
+Coordinate FIPS 140-2 validated cryptography usage with Key Vault and ensure encryption standards at rest and in transit are met and evidenced.
+Operate Azure Firewall, NSGs, Private Link, and DDoS Protection and monitor and remediate anomalies.
+Ensure logging and telemetry for network controls are complete, retained, and queryable within Sentinel.
+Produce monthly and quarterly Continuous Monitoring artifacts and maintain supporting evidence.
+Update detection coverage maps, control implementation narratives, and operational runbooks as environment changes occur.
+Collaborate with compliance and assessors, support interviews, evidence collection, and remediation tracking.
+Embed security checks into CI/CD pipelines using native integrations and support policy compliance and validation.
+Enforce disciplined change processes and ensure changes are reflected in the SSP, control evidence, and detections.
+Experience Requirements
+5+ years in security operations engineering or incident response, including 2+ years operating native Microsoft security tooling in Azure.
+Hands-on experience building and tuning Microsoft Sentinel detections and automating response with Logic Apps and Playbooks.
+Practical knowledge of FedRAMP Moderate or High baselines and NIST SP 800-53 control families relevant to operations, including AC, AU, CM, IR, RA, SC, and SI.
+Proficiency with Defender for Cloud, Azure Policy, Entra ID including PIM and Conditional Access, Key Vault, Azure Monitor, and Log Analytics.
+Strong incident response skills across triage, investigation, containment, and post-incident documentation with audit-quality evidence.
+Experience operating vulnerability and misconfiguration management workflows and meeting remediation SLAs aligned to FedRAMP timelines.
+Scripting and automation familiarity using KQL for Sentinel and PowerShell, with ARM, Bicep, or Terraform basics.
+Excellent documentation and communication skills for playbooks, evidence packages, and stakeholder updates.
+Experience with Azure Government or GCC High environments (preferred).
+Prior contributions to FedRAMP Continuous Monitoring reporting and POA&M lifecycle management (preferred).
+Experience aligning native controls and detections to payment or mission-critical workload risk profiles (preferred).
+Familiarity with Microsoft Purview, Defender for Cloud Apps, Entra ID Protection, and Private Link patterns (preferred).
+Certifications such as AZ-500, SC-200, CISSP, or CCSP (preferred).
+Education Requirements
+Relevant professional certifications such as AZ-500 Azure Security Engineer Associate (preferred).
+SC-200 Microsoft Security Operations Analyst (preferred).
+CISSP or CCSP certification (preferred).
+
+Skills, experience, and other compensable factors will be considered when determining pay rate. The pay range provided in this posting reflects a W2 hourly rate; other employment options may be available that may result in pay outside of the provided range.
+ W2 employees of Eliassen Group who are regularly scheduled to work 30 or more hours per week are eligible for the following benefits: medical (choice of 3 plans), dental, vision, pre-tax accounts, other voluntary benefits including life and disability insurance, 401(k) with match, and sick time if required by law in the worked-in state/locality.
+ Please be advised- If anyone reaches out to you about an open position connected with Eliassen Group, please confirm that they have an Eliassen.com email address and never provide personal or financial information to anyone who is not clearly associated with Eliassen Group. If you have any indication of fraudulent activity, please contact InfoSec@eliassen.com.
+ Job ID: JN -032026-106194",5,"{'tech_stack': ['.NET', 'Azure', 'Azure Policy', 'Az-500', 'Azure Security Engineer Associate', 'Bicep', 'CISSP', 'CQL', 'Conditional Access', 'Defender for Cloud', 'Defender for Cloud Apps', 'DDoS Protection', 'Elasticsearch', 'Entra ID', 'Entra ID Protection', 'Elsa'], 'technical_skills': ['Security Operations Engineering', 'Vulnerability Management', 'Continuous Monitoring', 'Incident Response', 'Auditing and Compliance', 'Security Architecture', 'System Design', 'Architecture Principles', 'Compliance', 'FedRAMP'], 'other_skills': ['Communication skills', 'Managerial roles', 'Cross-team collaboration', 'CI/CD pipelines', 'Project management'], 'required_skills': ['.NET', 'Azure', 'Defender for Cloud', 'Entra ID', 'KQL', 'Logic Apps', 'Microsoft Sentinel'], 'nice_to_have': []}",Unknown,Unknown,Previous resume,False,2026-03-31 13:47:16.581835,2026-03-31 14:18:40.944307,https://www.linkedin.com/jobs/view/4392468174,Easy Applied,"{('Email address [  ""Select an option"", ""c_avasamsetti@costco.com"", ""vmna56@gmail.com"", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Phone country code [ ""List of phone country codes"" ]', 'Yes', 'select', 'United States (+1)')}",In Development
+4378979303,Security Engineer (Incident Response),The Judge Grou,e Judge Grou,e Judge Grou,"About the job
+Job Title: Security Engineer (Incident Response)
+Locations: Ashburn, VA / Dallas, TX / Basking Ridge, NJ
+
+About the Role
+We are looking for an experienced Incident Response Consultant to lead high‑impact investigations and deliver proactive security services to enterprise customers. In this role, you will guide clients through complex security incidents, drive technical analysis, and collaborate on strategic improvements that strengthen overall security posture.
+
+Responsibilities
+Lead end‑to‑end incident response engagements, assigning workstreams, directing analysis, and ensuring clear, consistent communication with customers.
+Perform detailed investigation and threat analysis, documenting evidence, IOCs, and findings to expand internal knowledge bases and repeatable workflows.
+Deliver both standard and customized proactive security services, using data‑driven insights to align recommendations with customer operational needs.
+Partner with cross‑functional teams to design and refine proactive security offerings, service models, and customer engagement frameworks.
+
+Minimum Qualifications
+Consulting & Communication
+Proven consulting experience with strong customer‑facing skills; able to set expectations, manage escalations, and drive accountability throughout incident response.
+Exceptional crisis‑management communication skills; able to translate complex technical findings into clear guidance for both technical and non‑technical stakeholders during active incidents.
+Technical Expertise
+Hands‑on experience with SIEM and EDR platforms, specifically Splunk and CrowdStrike, for threat hunting, investigation, and incident analysis.
+
+Preferred Qualifications
+Experience designing, leading, or facilitating Tabletop Exercises (TTX) to evaluate and mature client incident readiness.
+Background in delivering cybersecurity training, workshops, or technical instruction to audiences ranging from SOC analysts to executive leadership.
+Advanced incident response capabilities, including memory forensics, malware analysis, and APT lateral movement investigation.
+Ability to convert threat intelligence into high‑value, strategic security recommendations to support long‑term resilience.
+
+Education & Certifications
+Bachelor’s degree in Computer Science, Cybersecurity, Information Technology, or related technical field.
+Industry certifications from recognized organizations (e.g., SANS GIAC, ISC2 CISSP, EC‑Council) preferred.
+Advanced DFIR certifications such as GCIH, GCFA, GCFE strongly encouraged.",0,"{'tech_stack': ['Splunk', 'CrowdStrike', 'SIEM'], 'technical_skills': ['Incident Response', 'Threat Analysis', 'Memory Forensics', 'Malware Analysis', 'APT Lateral Movement Investigation', 'Tabletop Exercises (TTX)', 'Cybersecurity Training', 'Technical Instruction'], 'other_skills': ['Communication Skills', 'Crisis Management', 'Escalation Management', 'Accountability', 'Cross-Functional Team Collaboration', 'Leadership'], 'required_skills': ['Incident Response', 'Threat Analysis', 'SIEM and EDR platforms (Splunk, CrowdStrike)', 'Crisis Management Communication', 'Customer-Facing Skills', 'Technical Expertise', 'Proactive Security Services Delivery'], 'nice_to_have': ['Experience with memory forensics, malware analysis, APT lateral movement investigation or similar', 'Experience designating leading or facilitating Tabletop Exercises (TTX)', 'Background in delivering cybersecurity training, workshops, technical instruction', 'Advanced incident response capabilities', 'Industry certifications (e.g., SANS GIAC, ISC2 CISSP, EC-Council', 'Advanced DFIR certifications (GCIH, GCFA, GCFE)']}",Pankaj Mishra ,https://www.linkedin.com/in/pankaj-mishra-58564564,Previous resume,False,2026-03-10 14:19:27.715738,2026-03-31 14:20:32.046249,https://www.linkedin.com/jobs/view/4378979303,Easy Applied,"{('Phone country code [ ""List of phone country codes"" ]', 'Yes', 'select', 'United States (+1)'), ('how many years of work experience do you have with threat analysis?', '5', 'text', ''), ('Email address [  ""Select an option"", ""c_avasamsetti@costco.com"", ""vmna56@gmail.com"", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Have you completed the following level of education: Bachelor\'s Degree? [  ""Yes""<Yes>, ""No""<No>, ]', 'Yes', 'radio', None), ('how many years of work experience do you have with strategic planning?', '5', 'text', '')}",In Development
+4390291132,Systems Engineer,OneChrono,eChrono,eChrono,"About the job
+OneChronos is seeking a software engineer to design and optimize high-performance trading systems that power our periodic auction matching infrastructure. This is a systems programming role focused on low-latency, high-throughput distributed computing, with exposure to infrastructure and DevOps. The ideal candidate has experience building real-time, performance-sensitive systems and thrives in a collaborative, research-driven environment at the intersection of mechanism design and financial markets.
+
+As a software engineer at OneChronos, your work will span order and data workflow, periodic auction execution, system reliability, and performance optimization, ensuring the platform is efficient, fault-tolerant, and capable of handling complex trade matching at scale.
+
+About (www.OneChronos.com)
+
+OneChronos is a technology company of diverse thinkers innovating at the intersection of capital markets, mechanism design, and operations research, working to grow the global GDP by designing and operating matching markets leveraging advances in auction theory and artificial intelligence. Our software and systems are developed in house and match billions of dollars per day of security transactions.
+
+Skills and Qualifications
+
+3+ years of professional software engineering experience
+Passion for the craft of writing high-quality code meant to be read and easily understood by a growing team
+Proficiency in a systems-level programming language (e.g., Rust, C++, Java), with Rust being a plus
+A polyglot mindset
+Highly detail-oriented, with a focus on ensuring correctness, consistency, and reliability
+Passionate about low-latency, high-performance computing, and memory management
+Comfort working with large-scale data pipelines and event-driven architectures
+Ability to write clean, well-tested code and collaborate in a highly technical team
+Hands-on experience with production systems and an understanding of operational challenges
+Experience with CI/CD pipelines, automated testing, and deployment best practices
+
+Benefits at OneChronos include
+Competitive compensation (salary, potential bonus, potential ownership interest)
+Hybrid and remote work flexibility
+Medical, dental and vision insurance for employees and dependents
+Subsidized fitness programming
+Subsidized health & wellness program
+Competitive vacation policy
+Life insurance
+401(k) plan
+Office snacks and drinks
+Pre-tax transportation program
+Annual company destination offsite
+Significant daily opportunities to be challenged, learn and grow
+Opportunity to work within a diverse team that values the success of others to be critical to the overall success of the business
+Ability to be excited about and proud of your business. Everyday",3,"{'tech_stack': ['Rust', 'C++', 'Java'], 'technical_skills': ['System Architecture', 'Data Engineering', 'System Design', 'Microservices', 'Distributed Systems', 'Low-latency, high-throughput distributed computing', 'Performance optimization', 'Event-driven architectures', 'CI/CD pipelines', 'Automated testing', 'Deployment best practices'], 'other_skills': ['Collaboration', 'Interpersonal skills', 'Leadership', 'Communication', 'Project management'], 'required_skills': ['Systems-level programming language proficiency', 'Passion for high-quality code', 'Detail-oriented with a focus on correctness, consistency, and reliability', 'Comfort working with large-scale data pipelines', 'Ability to write clean, well-tested code', 'Experience with production systems', 'Understanding of operational challenges'], 'nice_to_have': ['Hybrid and remote work flexibility', 'Competitive vacation policy', 'Opportunity to be excited about the business']}",Unknown,Unknown,Previous resume,False,2026-03-26 14:20:43.251952,2026-03-31 14:21:46.012176,https://www.linkedin.com/jobs/view/4390291132,Easy Applied,"{('Phone country code [ ""List of phone country codes"" ]', 'Yes', 'select', 'United States (+1)'), ('how many years of engineering experience do you currently have?', '5', 'text', ''), ('Email address [  ""Select an option"", ""c_avasamsetti@costco.com"", ""vmna56@gmail.com"", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('how many years of work experience do you have with c++?', '5', 'text', ''), ('mobile phone number', '2542844847', 'text', '2542844847'), ('how many years of work experience do you have with java?', '5', 'text', ''), ('Have you worked directly on production systems where performance and reliability had significant business or operational impact?  [  ""Select an option"", ""Yes"", ""No"", ]', 'Yes', 'select', 'Select an option'), ('Are you legally authorized to work in the United States? [  ""Yes""<Yes>, ""No""<No>, ]', '""Yes""<Yes>', 'radio', '""Yes""<Yes>')}",In Development

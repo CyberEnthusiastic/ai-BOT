@@ -1,201 +1,6 @@
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Logging in with a guest profile, Web history will not be saved!
-Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
-Failed to create Chrome Session, retrying with guest profile
-Message: session not created: cannot connect to chrome at 127.0.0.1:57185
-from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
-Stacktrace:
-	undetected_chromedriver!GetHandleVerifier [0x8625e3+10dd3]
-	undetected_chromedriver!GetHandleVerifier [0x862714+10f04]
-	undetected_chromedriver!(No symbol) [0x631f0e]
-	undetected_chromedriver!(No symbol) [0x625708]
-	undetected_chromedriver!(No symbol) [0x66c542]
-	undetected_chromedriver!(No symbol) [0x662865]
-	undetected_chromedriver!(No symbol) [0x662686]
-	undetected_chromedriver!(No symbol) [0x6a9dbf]
-	undetected_chromedriver!(No symbol) [0x6a95d7]
-	undetected_chromedriver!(No symbol) [0x69d986]
-	undetected_chromedriver!(No symbol) [0x6702f9]
-	undetected_chromedriver!(No symbol) [0x6710b4]
-	undetected_chromedriver!GetHandleVerifier [0xac2d54+271544]
-	undetected_chromedriver!GetHandleVerifier [0xabe399+26cb89]
-	undetected_chromedriver!GetHandleVerifier [0xadcc45+28b435]
-	undetected_chromedriver!GetHandleVerifier [0x87cee8+2b6d8]
-	undetected_chromedriver!GetHandleVerifier [0x884f1d+3370d]
-	undetected_chromedriver!GetHandleVerifier [0x86af68+19758]
-	undetected_chromedriver!GetHandleVerifier [0x86b132+19922]
-	undetected_chromedriver!GetHandleVerifier [0x8540cf+28bf]
-	KERNEL32!BaseThreadInitThunk [0x74ad5d49+19]
-	ntdll!RtlInitializeExceptionChain [0x76fad81b+6b]
-	ntdll!RtlGetAppContainerNamedObjectPath [0x76fad7a1+231]
-
-2026-03-31 13:55:29.364305
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Will login with a guest profile, browsing history will not be saved in the browser!
-Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Logging in with a guest profile, Web history will not be saved!
-Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
-Failed to create Chrome Session, retrying with guest profile
-Message: session not created: cannot connect to chrome at 127.0.0.1:49985
-from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
-Stacktrace:
-	undetected_chromedriver!GetHandleVerifier [0xe925e3+10dd3]
-	undetected_chromedriver!GetHandleVerifier [0xe92714+10f04]
-	undetected_chromedriver!(No symbol) [0xc61f0e]
-	undetected_chromedriver!(No symbol) [0xc55708]
-	undetected_chromedriver!(No symbol) [0xc9c542]
-	undetected_chromedriver!(No symbol) [0xc92865]
-	undetected_chromedriver!(No symbol) [0xc92686]
-	undetected_chromedriver!(No symbol) [0xcd9dbf]
-	undetected_chromedriver!(No symbol) [0xcd95d7]
-	undetected_chromedriver!(No symbol) [0xccd986]
-	undetected_chromedriver!(No symbol) [0xca02f9]
-	undetected_chromedriver!(No symbol) [0xca10b4]
-	undetected_chromedriver!GetHandleVerifier [0x10f2d54+271544]
-	undetected_chromedriver!GetHandleVerifier [0x10ee399+26cb89]
-	undetected_chromedriver!GetHandleVerifier [0x110cc45+28b435]
-	undetected_chromedriver!GetHandleVerifier [0xeacee8+2b6d8]
-	undetected_chromedriver!GetHandleVerifier [0xeb4f1d+3370d]
-	undetected_chromedriver!GetHandleVerifier [0xe9af68+19758]
-	undetected_chromedriver!GetHandleVerifier [0xe9b132+19922]
-	undetected_chromedriver!GetHandleVerifier [0xe840cf+28bf]
-	KERNEL32!BaseThreadInitThunk [0x74ad5d49+19]
-	ntdll!RtlInitializeExceptionChain [0x76fad81b+6b]
-	ntdll!RtlGetAppContainerNamedObjectPath [0x76fad7a1+231]
-
-2026-03-31 13:58:36.103105
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Will login with a guest profile, browsing history will not be saved in the browser!
-Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Logging in with a guest profile, Web history will not be saved!
-Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
-Failed to create Chrome Session, retrying with guest profile
-Message: session not created: cannot connect to chrome at 127.0.0.1:62106
-from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
-Stacktrace:
-	undetected_chromedriver!GetHandleVerifier [0xc825e3+10dd3]
-	undetected_chromedriver!GetHandleVerifier [0xc82714+10f04]
-	undetected_chromedriver!(No symbol) [0xa51f0e]
-	undetected_chromedriver!(No symbol) [0xa45708]
-	undetected_chromedriver!(No symbol) [0xa8c542]
-	undetected_chromedriver!(No symbol) [0xa82865]
-	undetected_chromedriver!(No symbol) [0xa82686]
-	undetected_chromedriver!(No symbol) [0xac9dbf]
-	undetected_chromedriver!(No symbol) [0xac95d7]
-	undetected_chromedriver!(No symbol) [0xabd986]
-	undetected_chromedriver!(No symbol) [0xa902f9]
-	undetected_chromedriver!(No symbol) [0xa910b4]
-	undetected_chromedriver!GetHandleVerifier [0xee2d54+271544]
-	undetected_chromedriver!GetHandleVerifier [0xede399+26cb89]
-	undetected_chromedriver!GetHandleVerifier [0xefcc45+28b435]
-	undetected_chromedriver!GetHandleVerifier [0xc9cee8+2b6d8]
-	undetected_chromedriver!GetHandleVerifier [0xca4f1d+3370d]
-	undetected_chromedriver!GetHandleVerifier [0xc8af68+19758]
-	undetected_chromedriver!GetHandleVerifier [0xc8b132+19922]
-	undetected_chromedriver!GetHandleVerifier [0xc740cf+28bf]
-	KERNEL32!BaseThreadInitThunk [0x74ad5d49+19]
-	ntdll!RtlInitializeExceptionChain [0x76fad81b+6b]
-	ntdll!RtlGetAppContainerNamedObjectPath [0x76fad7a1+231]
-
-2026-03-31 14:01:24.472952
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Will login with a guest profile, browsing history will not be saved in the browser!
-Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Logging in with a guest profile, Web history will not be saved!
-Failed to create Chrome Session, retrying with guest profile
-Message: session not created
-from unknown error: Could not remove old devtools port file. Perhaps the given user-data-dir at --user-data-dir=C:\temp\auto-job-apply-profile is still attached to a running Chrome or Chromium process; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
-Stacktrace:
-	chromedriver!GetHandleVerifier [0x7ff7e6e929c5+2ed785]
-	chromedriver!GetHandleVerifier [0x7ff7e6bba0d0+14e90]
-	chromedriver!(No symbol) [0x7ff7e691db2d]
-	chromedriver!(No symbol) [0x7ff7e69642fe]
-	chromedriver!(No symbol) [0x7ff7e695f7c8]
-	chromedriver!(No symbol) [0x7ff7e69597a1]
-	chromedriver!(No symbol) [0x7ff7e69adc51]
-	chromedriver!(No symbol) [0x7ff7e69ad4b6]
-	chromedriver!(No symbol) [0x7ff7e6969298]
-	chromedriver!(No symbol) [0x7ff7e696a183]
-	chromedriver!GetHandleVerifier [0x7ff7e6ebde0d+318bcd]
-	chromedriver!GetHandleVerifier [0x7ff7e6eb8588+313348]
-	chromedriver!GetHandleVerifier [0x7ff7e6ed9d7a+334b3a]
-	chromedriver!GetHandleVerifier [0x7ff7e6bd6785+31545]
-	chromedriver!GetHandleVerifier [0x7ff7e6bdfacc+3a88c]
-	chromedriver!GetHandleVerifier [0x7ff7e6bc3634+1e3f4]
-	chromedriver!GetHandleVerifier [0x7ff7e6bc37e6+1e5a6]
-	chromedriver!GetHandleVerifier [0x7ff7e6ba7e37+2bf7]
-	KERNEL32!BaseThreadInitThunk [0x7ffcc9ade8d7+17]
-	ntdll!RtlUserThreadStart [0x7ffccac2c48c+2c]
-
-2026-03-31 14:08:20.668790
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Will login with a guest profile, browsing history will not be saved in the browser!
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Logging in with a guest profile, Web history will not be saved!
-Failed to create Chrome Session, retrying with guest profile
-Message: session not created
-from unknown error: Could not remove old devtools port file. Perhaps the given user-data-dir at --user-data-dir=C:\temp\auto-job-apply-profile is still attached to a running Chrome or Chromium process; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
-Stacktrace:
-	chromedriver!GetHandleVerifier [0x7ff7e6e929c5+2ed785]
-	chromedriver!GetHandleVerifier [0x7ff7e6bba0d0+14e90]
-	chromedriver!(No symbol) [0x7ff7e691db2d]
-	chromedriver!(No symbol) [0x7ff7e69642fe]
-	chromedriver!(No symbol) [0x7ff7e695f7c8]
-	chromedriver!(No symbol) [0x7ff7e69597a1]
-	chromedriver!(No symbol) [0x7ff7e69adc51]
-	chromedriver!(No symbol) [0x7ff7e69ad4b6]
-	chromedriver!(No symbol) [0x7ff7e6969298]
-	chromedriver!(No symbol) [0x7ff7e696a183]
-	chromedriver!GetHandleVerifier [0x7ff7e6ebde0d+318bcd]
-	chromedriver!GetHandleVerifier [0x7ff7e6eb8588+313348]
-	chromedriver!GetHandleVerifier [0x7ff7e6ed9d7a+334b3a]
-	chromedriver!GetHandleVerifier [0x7ff7e6bd6785+31545]
-	chromedriver!GetHandleVerifier [0x7ff7e6bdfacc+3a88c]
-	chromedriver!GetHandleVerifier [0x7ff7e6bc3634+1e3f4]
-	chromedriver!GetHandleVerifier [0x7ff7e6bc37e6+1e5a6]
-	chromedriver!GetHandleVerifier [0x7ff7e6ba7e37+2bf7]
-	KERNEL32!BaseThreadInitThunk [0x7ffcc9ade8d7+17]
-	ntdll!RtlUserThreadStart [0x7ffccac2c48c+2c]
-
-2026-03-31 14:10:10.984667
-IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
-Will login with a guest profile, browsing history will not be saved in the browser!
-Login successful!
-Creating OpenAI client...
-Getting AI models list...
-Available models:
-[Model(id='llama3.2:latest', created=1774983142, object='model', owned_by='library')]
----- SUCCESSFULLY CREATED OPENAI CLIENT! ----
-Using API URL: http://localhost:11434/v1/
-Using Model: llama3.2:latest
-Check './config/secrets.py' for more details.
-
----------------------------------------------
-Extracted about company info for AI: 'Mohith Vasamsetti'
-
-########################################################################################################################
-
-Date and Time: 2026-03-31 14:10:58.181674
-Cycle number: 1
-Currently looking for jobs posted within 'Past week' and sorting them by ''
-The CSV file 'all excels/all_applied_applications_history.csv' does not exist.
-
-________________________________________________________________________________________________________________________
-
-
->>>> Now searching for "Security Engineer" <<<<
-
-
-Setting search location as: "United States"
-
--@-
-
-Trying to Apply to "Principal Security Engineer | Colossus Technologies Grou" job. Job ID: 4380649378
-
-"About the company
+Job ID,Job Link,Resume Tried,Date listed,Date Tried,Assumed Reason,Stack Trace,External Job link,Screenshot Name
+4380649378,https://www.linkedin.com/jobs/view/4380649378,Pending,Unknown,2026-03-31 14:11:31.465626,Found Blacklisted words in About Company,"
+""About the company
 Colossus Technologies Group
 17,686 followers
 Follow
@@ -206,17 +11,11 @@ show more
 Interested in working with us in the future?
 Members who share that they’re interested in a company may be 2x as likely to get a message from a recruiter than those who don’t. Learn more
 Learn more about Interested in working for our company
-I’m interested"
+I’m interested""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Engineer | Mindlanc" job. Job ID: 4337050740
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4337050740,https://www.linkedin.com/jobs/view/4337050740,Pending,Unknown,2026-03-31 14:11:35.702497,Found Blacklisted words in About Company,"
+""About the company
 Mindlance
 638,621 followers
 Follow
@@ -239,17 +38,11 @@ Largest U.S. Staffing Firms • Largest IT Staffing Firms • Largest Life Scien
 Learn more at www.mindlance.com
 
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Platform Engineer | MMD Service" job. Job ID: 4371167081
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4371167081,https://www.linkedin.com/jobs/view/4371167081,Pending,Unknown,2026-03-31 14:11:39.691672,Found Blacklisted words in About Company,"
+""About the company
 MMD Services
 118,938 followers
 Follow
@@ -258,17 +51,11 @@ MMD Services Inc. is a certified Woman Owned Staffing Boutique that specializes 
 
 Founded in February 2006 by Maria Dubov, MMD’s beginnings were marked by solid industry experience, a passion for staffing, and an impressive portfolio of professional relationships. In 2022, MMD Services added an Accounting and Finance Division to the firm. Today, we represent a team of highly skilled and experienced staffing professionals that maintain the industry’s highest standards of quality.
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Senior Security Engineer | Insight Globa" job. Job ID: 4387398811
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4387398811,https://www.linkedin.com/jobs/view/4387398811,Pending,Unknown,2026-03-31 14:11:43.882012,Found Blacklisted words in About Company,"
+""About the company
 Insight Global
 5,011,320 followers
 Follow
@@ -301,17 +88,11 @@ I’m interested
 Company photos
 Page 1 of 3
 Previous
-Next"
+Next""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Senior Security Engineer | Evrhir" job. Job ID: 4378897484
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4378897484,https://www.linkedin.com/jobs/view/4378897484,Pending,Unknown,2026-03-31 14:11:48.078033,Found Blacklisted words in About Company,"
+""About the company
 Evrhire
 10,394 followers
 Follow
@@ -324,17 +105,11 @@ Evrhire can support your Direct Hire, Contract/Temporary and Contract-to-hire ta
 
 Whether you are in the early stages of your career or operating as executive C-Suite leadership, Evrhire has the expertise to find our candidates the right career opportunities at some of the best rated organizations.
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Engineer | Catapult Solutions Grou" job. Job ID: 4385939208
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4385939208,https://www.linkedin.com/jobs/view/4385939208,Pending,Unknown,2026-03-31 14:11:52.025678,Found Blacklisted words in About Company,"
+""About the company
 Catapult Solutions Group
 235,075 followers
 Follow
@@ -374,52 +149,11 @@ I’m interested
 Company photos
 Page 1 of 3
 Previous
-Next"
+Next""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "DevSecOps Engineer | LTIMindtre" job. Job ID: 4368042285
-
-About the job
-LTIMindtree is an equal opportunity employer that is committed to diversity in the workplace. Our employment decisions are made without regard to race, color, creed, religion, sex (including pregnancy, childbirth or related medical conditions), gender identity or expression, national origin, ancestry, age, family-care status, veteran status, marital status, civil union status, domestic partnership status, military service, handicap or disability or history of handicap or disability, genetic information, atypical hereditary cellular or blood trait, union affiliation, affectional or sexual orientation or preference, or any other characteristic protected by applicable federal, state, or local law, except where such considerations are bona fide occupational qualifications permitted by law.
-A little about us...
- Role: Azure DevOps Engineer
-Location: Berkeley Heights, NJ
-
-Job Description:
-1. Extensive hands-on experience on GitHub Actions writing workflows in YAML using re-usable templates
-2. Extensive hands-on experience with application CI/CD pipelines both for Azure and on-prem for different frameworks
-3. Hands on experience with Azure DevOps and migration programs of CI/CD pipelines preferably from Azure DevOps to GitHub Actions
-4. Proficiency in integrating and consuming REST APIs to achieve automation through scripting
-5. Hands on experience with atleast 1 scripting language and has done out of box automations for platforms like People Soft, SharePoint, MDM etc
-6. Hands on experience with CI/CD of databases
-7. Good to have experience with infrastructure-as-code including ARM templates Terraform Azure CLI Azure PowerShell modules
-8. Exposure to monitoring tools like ELK Prometheus Grafana
-
-LTIMindtree is an equal opportunity employer that is committed to diversity in the workplace. Our employment decisions are made without regard to race, color, creed, religion, sex (including pregnancy, childbirth or related medical conditions), gender identity or expression, national origin, ancestry, age, family-care status, veteran status, marital status, civil union status, domestic partnership status, military service, handicap or disability or history of handicap or disability, genetic information, atypical hereditary cellular or blood trait, union affiliation, affectional or sexual orientation or preference, or any other characteristic protected by applicable federal, state, or local law, except where such considerations are bona fide occupational qualifications permitted by law.
-
-Couldn't find experience requirement in About the Job!
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
-
-AI Answer to Question:
-
-{'tech_stack': ['Python', 'GitHub Actions', 'YAML', 'Azure DevOps', 'Azure CLI', 'Azure PowerShell', 'Terraform', 'ARM templates', 'ELK Prometheus Grafana'], 'technical_skills': ['System Architecture', 'CI/CD pipelines', 'Database CI/CD', 'Microservices', 'Distributed Systems'], 'other_skills': ['Communication skills', 'Managerial roles', 'Cross-team collaboration', 'Leadership skills'], 'required_skills': ['Extensive hands-on experience with GitHub Actions writing workflows in YAML using re-usable templates', 'Proficiency in integrating and consuming REST APIs to achieve automation through scripting', 'Hands on experience with atleast 1 scripting language', 'Good to have experience with infrastructure-as-code including ARM templates Terraform Azure CLI Azure PowerShell modules'], 'nice_to_have': ['Experience with People Soft, SharePoint, MDM', 'Experience with CI/CD of databases', 'Experience with on-prem frameworks']}
-Extracted skills using openai AI
-Click Failed! Didn't find 'Next'
-Answered the following questions...
-{('Email address [  "Select an option", "c_avasamsetti@costco.com", "vmna56@gmail.com", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('how many years of work experience do you have with devsecops?', '5', 'text', '5'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Phone country code [ "List of phone country codes" ]', 'Yes', 'select', 'United States (+1)')}
-Click Failed! Didn't find 'Review'
-Successfully saved "DevSecOps Engineer | LTIMindtre" job. Job ID: 4368042285 info
-
--@-
-
-Trying to Apply to "Offensive Security Engineer | Code Red Partner" job. Job ID: 4384721287
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4384721287,https://www.linkedin.com/jobs/view/4384721287,Pending,Unknown,2026-03-31 14:13:23.896514,Found Blacklisted words in About Company,"
+""About the company
 Code Red Partners
 28,257 followers
 Follow
@@ -433,17 +167,11 @@ show more
 Trending employee content
 Page 1 of 2
 Previous
-Next"
+Next""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Sr Systems Security Engineer | Dunhill Professional Search & Government Solution" job. Job ID: 4387491150
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4387491150,https://www.linkedin.com/jobs/view/4387491150,Pending,Unknown,2026-03-31 14:13:27.599361,Found Blacklisted words in About Company,"
+""About the company
 Dunhill Professional Search & Government Solutions
 141,970 followers
 Follow
@@ -458,31 +186,10 @@ Dunhill Professional Search has been consistently recognized by clients as one o
 
 At Dunhill Professional Search, we are dedicated to helping our clients transform their businesses by finding superior leaders whose contributions translate into performance growth. With our esteemed candidates searching for a new opportunity, we offer a unique blend of becoming your career agent and advisor
 …
-show more"
+show more""
 
-Contains "Recruiting".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Sr. IAM Security Engineer (PingFederate) | The Judge Grou" job. Job ID: 4384062976
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
-
-AI Answer to Question:
-
-{'tech_stack': ['Ping Federate', 'Ping ID', 'Docker', 'Kubernetes', '.NET', 'Linux', 'VPN', 'IDS/IPS', 'anti-virus'], 'technical_skills': ['System Architecture', 'Network Security', 'Threat Detection', 'Containerization'], 'other_skills': ['Communication skills', 'Managerial roles'], 'required_skills': ['Strong working knowledge of Ping ecosystem', '.NET', 'Linux', 'VPN', 'IDS/IPS', 'Proven technical track record with network defense tools'], 'nice_to_have': []}
-Extracted skills using openai AI
-Click Failed! Didn't find 'Next'
-Answered the following questions...
-{('how many years of work experience do you have with cybersecurity?', '5', 'text', ''), ('Phone country code [ "List of phone country codes" ]', 'Yes', 'select', 'United States (+1)'), ('Email address [  "Select an option", "c_avasamsetti@costco.com", "vmna56@gmail.com", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('how many years of work experience do you have with identity and access management (iam)?', '5', 'text', ''), ('how many years of work experience do you have with pingfederate?', '5', 'text', '')}
-Click Failed! Didn't find 'Review'
-Successfully saved "Sr. IAM Security Engineer (PingFederate) | The Judge Grou" job. Job ID: 4384062976 info
-
--@-
-
-Trying to Apply to "AI Infrastructure Engineer | Akkodi" job. Job ID: 4387165437
-
+Contains ""Recruiting"".",Skipped,Not Available
+4387165437,https://www.linkedin.com/jobs/view/4387165437,Pending,2026-03-24 14:14:34.677758,2026-03-31 14:14:34.776105,Required experience is high,"
 About the job
 Akkodis is seeking a AI Infrastructure Engineer for a Direct Hire position with a client located in Lake Mary FL or Pittsburgh PA. Ideally looking for applicants with a solid background in the financial services industry.
 
@@ -527,28 +234,9 @@ To read our Candidate Privacy Information Statement, which explains how we will 
 The Company will consider qualified applicants with arrest and conviction records.
 
 Experience required 8 > Current Experience 5. Skipping this job!
-
-
--@-
-
-Trying to Apply to "Physical Security Project Engineer - Reno, NV. | RedCloud Consultin" job. Job ID: 4376442402
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
-
-AI Answer to Question:
-
-{'tech_stack': [], 'technical_skills': ['Construction Engineering', 'Access Control'], 'other_skills': ['Communication skills', 'Problem-solving capabilities', 'Issue-management capabilities', 'Cross-function collaboration', 'Leadership', 'Time management'], 'required_skills': ['Physical security systems', 'Construction engineering', 'Strong understanding of access control, video surveillance, intrusion detection, and related infrastructure.', 'Interpretation of A/E drawings and technical design standards', 'Excellent communication skills', 'Proactive problem-solving capabilities', 'Ability to manage issues'], 'nice_to_have': []}
-Extracted skills using openai AI
-Click Failed! Didn't find 'Next'
-Answered the following questions...
-{('Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)? [  "Yes"<Yes>, "No"<No>, ]', '"Yes"<Yes>', 'radio', '"Yes"<Yes>'), ('how many years of work experience do you have with data center construction?', '5', 'text', ''), ('Phone country code [ "List of phone country codes" ]', 'Yes', 'select', 'United States (+1)'), ('Email address [  "Select an option", "c_avasamsetti@costco.com", "vmna56@gmail.com", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('Are you located in the Greater Reno area (1 hour of drive time)?  [  "Select an option", "Yes", "No", ]', 'Yes', 'select', 'Select an option'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Are you legally authorized to work in the United States? [  "Yes"<Yes>, "No"<No>, ]', '"Yes"<Yes>', 'radio', '"Yes"<Yes>')}
-Click Failed! Didn't find 'Review'
-Successfully saved "Physical Security Project Engineer - Reno, NV. | RedCloud Consultin" job. Job ID: 4376442402 info
-
--@-
-
-Trying to Apply to "System Security Engineer | Cannon Searc" job. Job ID: 4385760324
-
-"About the company
+",Skipped,Not Available
+4385760324,https://www.linkedin.com/jobs/view/4385760324,Pending,Unknown,2026-03-31 14:15:49.722222,Found Blacklisted words in About Company,"
+""About the company
 Cannon Search
 14,788 followers
 Follow
@@ -559,17 +247,11 @@ Our success is driven by the strong, lasting relationships we build with both cl
 
 Whether you're a professional seeking your next career move or a company in search of top-tier talent, our expertise and extensive network ensure you achieve your goals with confidence.
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Engineer | Tucker Parker Smith Group (TPS Group" job. Job ID: 4387102595
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4387102595,https://www.linkedin.com/jobs/view/4387102595,Pending,Unknown,2026-03-31 14:15:54.104692,Found Blacklisted words in About Company,"
+""About the company
 Tucker Parker Smith Group (TPS Group)
 65,688 followers
 Follow
@@ -578,16 +260,10 @@ The Tucker Parker Smith Group ( TPS Group), is a professional recruiting and sta
 
 Our valued client network ranges from Fortune 500 companies to regional and local businesses in multiple industries. The reasons for our success are as simple and straightforward as the philosophy that motivated the formation of our firm: we have a passion for what we do and value the responsibility that candidates and our clients entrust us with daily.
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Engineer | SteerBridg" job. Job ID: 4379978094
-
+Contains ""Staffing"".",Skipped,Not Available
+4379978094,https://www.linkedin.com/jobs/view/4379978094,Pending,2026-03-03 14:15:59.168959,2026-03-31 14:15:59.262965,Asking for Security clearance,"
 About the job
 SteerBridge Strategies is a modern technology company delivering innovative, mission‑focused solutions to the U.S. Government and private sector. Leveraging deep expertise in federal acquisition, digital transformation, and emerging technologies, we deliver agile, commercial‑grade capabilities that accelerate operational effectiveness and drive measurable mission success.
 
@@ -632,13 +308,9 @@ Employees in this role are responsible for safeguarding sensitive information an
 
 We may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.
 
-Found "Clearance" or "Polygraph". Skipping this job!
-
-
--@-
-
-Trying to Apply to "IAM Security Engineer/Architect | IntePro" job. Job ID: 4391770860
-
+Found ""Clearance"" or ""Polygraph"". Skipping this job!
+",Skipped,Not Available
+4391770860,https://www.linkedin.com/jobs/view/4391770860,Pending,2026-03-28 14:16:03.764196,2026-03-31 14:16:03.976900,Required experience is high,"
 About the job
 We’re partnering with a leading financial institution to bring on a hands-on IAM Security Engineer/Architect to support a large-scale FedRAMP-compliant Azure environment. This is a high-impact role where you’ll own identity architecture, enforce security controls, and ensure audit readiness across a complex cloud ecosystem.
 
@@ -667,29 +339,9 @@ This role is ideal for someone who can own IAM end-to-end—from architecture de
 #LI-AL1
 
 Experience required 7 > Current Experience 5. Skipping this job!
-
-
--@-
-
-Trying to Apply to "Software Engineer (DevOps) | HCLTec" job. Job ID: 4354014427
-HR info was not given for "Software Engineer (DevOps)" with Job ID: 4354014427!
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
-
-AI Answer to Question:
-
-{'tech_stack': ['Python', 'DevOps', 'CI/CD', 'Machine learning', 'SQL', 'Linux'], 'technical_skills': ['System Architecture', 'Design implementation', 'Training', 'Testing', 'Debugging', 'Algorithms'], 'other_skills': ['Communication skills', 'Managerial roles', 'Cross-team collaboration', 'Documentation'], 'required_skills': ['Hands on experience with DevOps & CI/CD technologies.', 'Basic knowledge of what machine learning models are, and different types of algorithms.'], 'nice_to_have': ['Build blocks of AI implementation.', 'Basic SQL', 'Linux']}
-Extracted skills using openai AI
-Click Failed! Didn't find 'Next'
-Answered the following questions...
-{('how much experience do you have...?', '5', 'text', ''), ('Are you fine for a coding interview..? [  "Select an option", "Yes", "No", ]', 'Yes', 'select', 'Select an option'), ('Phone country code [ "List of phone country codes" ]', 'Yes', 'select', 'United States (+1)'), ('Email address [  "Select an option", "c_avasamsetti@costco.com", "vmna56@gmail.com", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('Do you have strong coding experience in ..? [  "Select an option", "Yes", "No", ]', 'Yes', 'select', 'Select an option'), ('mobile phone number', '2542844847', 'text', '2542844847')}
-Click Failed! Didn't find 'Review'
-Successfully saved "Software Engineer (DevOps) | HCLTec" job. Job ID: 4354014427 info
-
--@-
-
-Trying to Apply to "Cloud Operations Engineer | Proven Recruitin" job. Job ID: 4392371164
-
-"About the company
+",Skipped,Not Available
+4392371164,https://www.linkedin.com/jobs/view/4392371164,Pending,Unknown,2026-03-31 14:17:05.468537,Found Blacklisted words in About Company,"
+""About the company
 Proven Recruiting
 241,866 followers
 Follow
@@ -708,17 +360,11 @@ Diversity, equity, and inclusion
 85% of our elite performers, managers, and directors are women and/or minorities, so we know from experience that a diverse team is more profitable, creative, and fun. To that end, we regularly bring together experts and local professionals for interactive panels and wellness events, partnering with companies including Sony Electronics and Sempra Energy. In addition, we work directly with first-generation students and recent graduates to develop career opportunities, partnering with the Barrio Logan Institute, PiCs, and EmpowHer, among others.
 …
 Show more
-Learn more"
+Learn more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "AWS Cloud Security Engineer | Take2 Consulting, LL" job. Job ID: 4390605001
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4390605001,https://www.linkedin.com/jobs/view/4390605001,Pending,Unknown,2026-03-31 14:17:09.300099,Found Blacklisted words in About Company,"
+""About the company
 Take2 Consulting, LLC
 145,515 followers
 Follow
@@ -735,32 +381,10 @@ With our People Cloud and an unmatched ability to quickly fill critical roles, w
 
 Explore our latest insights and learn more about our IT staffing and services solutions at take2it.com.
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Operations Engineer | Eliassen Grou" job. Job ID: 4392468174
-HR info was not given for "Security Operations Engineer" with Job ID: 4392468174!
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
-
-AI Answer to Question:
-
-{'tech_stack': ['.NET', 'Azure', 'Azure Policy', 'Az-500', 'Azure Security Engineer Associate', 'Bicep', 'CISSP', 'CQL', 'Conditional Access', 'Defender for Cloud', 'Defender for Cloud Apps', 'DDoS Protection', 'Elasticsearch', 'Entra ID', 'Entra ID Protection', 'Elsa'], 'technical_skills': ['Security Operations Engineering', 'Vulnerability Management', 'Continuous Monitoring', 'Incident Response', 'Auditing and Compliance', 'Security Architecture', 'System Design', 'Architecture Principles', 'Compliance', 'FedRAMP'], 'other_skills': ['Communication skills', 'Managerial roles', 'Cross-team collaboration', 'CI/CD pipelines', 'Project management'], 'required_skills': ['.NET', 'Azure', 'Defender for Cloud', 'Entra ID', 'KQL', 'Logic Apps', 'Microsoft Sentinel'], 'nice_to_have': []}
-Extracted skills using openai AI
-Click Failed! Didn't find 'Next'
-Answered the following questions...
-{('Email address [  "Select an option", "c_avasamsetti@costco.com", "vmna56@gmail.com", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Phone country code [ "List of phone country codes" ]', 'Yes', 'select', 'United States (+1)')}
-Click Failed! Didn't find 'Review'
-Successfully saved "Security Operations Engineer | Eliassen Grou" job. Job ID: 4392468174 info
-
--@-
-
-Trying to Apply to "Senior Security Engineer l $135,000 – $155,000 l Remote | Maestro Searc" job. Job ID: 4382710825
-
+Contains ""Staffing"".",Skipped,Not Available
+4382710825,https://www.linkedin.com/jobs/view/4382710825,Pending,2026-03-17 14:18:48.698173,2026-03-31 14:18:48.857626,Required experience is high,"
 About the job
 Senior Security Engineer l $135,000 – $155,000 l Remote
 
@@ -789,13 +413,9 @@ Send your resume to bc@maestro-search.com or apply directly
 Maestro Search are a leading cyber security talent partner, connecting elite cybersecurity professionals with ambitious and innovative companies. If you’re a top performer in your space, we’d love to hear from you.
 
 Experience required 6 > Current Experience 5. Skipping this job!
-
-
--@-
-
-Trying to Apply to "Offensive Security Engineer | Gravity IT Resource" job. Job ID: 4388565074
-
-"About the company
+",Skipped,Not Available
+4388565074,https://www.linkedin.com/jobs/view/4388565074,Pending,Unknown,2026-03-31 14:18:52.952461,Found Blacklisted words in About Company,"
+""About the company
 Gravity IT Resources
 288,898 followers
 Follow
@@ -816,17 +436,11 @@ I’m interested
 Trending employee content
 Page 1 of 4
 Previous
-Next"
+Next""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Systems Engineer | Crossing Hurdle" job. Job ID: 4372064733
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4372064733,https://www.linkedin.com/jobs/view/4372064733,Pending,Unknown,2026-03-31 14:18:57.289071,Found Blacklisted words in About Company,"
+""About the company
 Crossing Hurdles
 2,623,793 followers
 Follow
@@ -854,16 +468,10 @@ show more
 Interested in working with us in the future?
 Members who share that they’re interested in a company may be 2x as likely to get a message from a recruiter than those who don’t. Learn more
 Learn more about Interested in working for our company
-I’m interested"
+I’m interested""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Senior Security Engineer | Secur-Ser" job. Job ID: 4389775650
-
+Contains ""Staffing"".",Skipped,Not Available
+4389775650,https://www.linkedin.com/jobs/view/4389775650,Pending,2026-03-24 14:19:03.067230,2026-03-31 14:19:03.195157,Found a Bad Word in About Job,"
 About the job
 *****NO C2C OR THIRD PARTY INQUIRIES*****
 
@@ -915,14 +523,10 @@ Experience with Prisma Access
 Experience with public clouds like AWS/GCP/Azure
 Scripting and automation development experience
 
-Contains bad word "No C2C". Skipping this job!
-
-
--@-
-
-Trying to Apply to "Cloud Engineer | HAN Staffin" job. Job ID: 4385491110
-
-"About the company
+Contains bad word ""No C2C"". Skipping this job!
+",Skipped,Not Available
+4385491110,https://www.linkedin.com/jobs/view/4385491110,Pending,Unknown,2026-03-31 14:19:07.679750,Found Blacklisted words in About Company,"
+""About the company
 HAN Staffing
 13,820 followers
 Follow
@@ -944,24 +548,11 @@ We are extremely proud to be a women-owned & women-led business. Officially spea
 We are proud to deliver the best staffing experience and services in the country. Try us!
 
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
->-> Now on Page 2 
-
-
--@-
-
-Skipping "Principal Security Engineer | Colossus Technologies Grou" job (Blacklisted Company). Job ID: 4380644557!
-
--@-
-
-Trying to Apply to "Senior Microsoft Security Engineer (AI & DLP Focus) | Covenant H" job. Job ID: 4391755708
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4391755708,https://www.linkedin.com/jobs/view/4391755708,Pending,Unknown,2026-03-31 14:19:18.091633,Found Blacklisted words in About Company,"
+""About the company
 Covenant HR
 71,305 followers
 Follow
@@ -979,17 +570,11 @@ Scout™ is Covenant HR’s revolutionary recruitment technology designed to sol
 
 Looking for elite hires? Or ready to join an exceptional team? Covenant HR is here to help. Let us build your dream team—or help you find your dream job—today.
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Data Platform Engineer | Brooksourc" job. Job ID: 4385288889
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4385288889,https://www.linkedin.com/jobs/view/4385288889,Pending,Unknown,2026-03-31 14:19:22.322572,Found Blacklisted words in About Company,"
+""About the company
 Brooksource
 1,440,678 followers
 Follow
@@ -1018,102 +603,22 @@ Learn more
 Interested in working with us in the future?
 Members who share that they’re interested in a company may be 2x as likely to get a message from a recruiter than those who don’t. Learn more
 Learn more about Interested in working for our company
-I’m interested"
+I’m interested""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Security Engineer (Incident Response) | The Judge Grou" job. Job ID: 4378979303
-
-About the job
-Job Title: Security Engineer (Incident Response)
-Locations: Ashburn, VA / Dallas, TX / Basking Ridge, NJ
-
-About the Role
-We are looking for an experienced Incident Response Consultant to lead high‑impact investigations and deliver proactive security services to enterprise customers. In this role, you will guide clients through complex security incidents, drive technical analysis, and collaborate on strategic improvements that strengthen overall security posture.
-
-Responsibilities
-Lead end‑to‑end incident response engagements, assigning workstreams, directing analysis, and ensuring clear, consistent communication with customers.
-Perform detailed investigation and threat analysis, documenting evidence, IOCs, and findings to expand internal knowledge bases and repeatable workflows.
-Deliver both standard and customized proactive security services, using data‑driven insights to align recommendations with customer operational needs.
-Partner with cross‑functional teams to design and refine proactive security offerings, service models, and customer engagement frameworks.
-
-Minimum Qualifications
-Consulting & Communication
-Proven consulting experience with strong customer‑facing skills; able to set expectations, manage escalations, and drive accountability throughout incident response.
-Exceptional crisis‑management communication skills; able to translate complex technical findings into clear guidance for both technical and non‑technical stakeholders during active incidents.
-Technical Expertise
-Hands‑on experience with SIEM and EDR platforms, specifically Splunk and CrowdStrike, for threat hunting, investigation, and incident analysis.
-
-Preferred Qualifications
-Experience designing, leading, or facilitating Tabletop Exercises (TTX) to evaluate and mature client incident readiness.
-Background in delivering cybersecurity training, workshops, or technical instruction to audiences ranging from SOC analysts to executive leadership.
-Advanced incident response capabilities, including memory forensics, malware analysis, and APT lateral movement investigation.
-Ability to convert threat intelligence into high‑value, strategic security recommendations to support long‑term resilience.
-
-Education & Certifications
-Bachelor’s degree in Computer Science, Cybersecurity, Information Technology, or related technical field.
-Industry certifications from recognized organizations (e.g., SANS GIAC, ISC2 CISSP, EC‑Council) preferred.
-Advanced DFIR certifications such as GCIH, GCFA, GCFE strongly encouraged.
-
-Couldn't find experience requirement in About the Job!
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
-
-AI Answer to Question:
-
-{'tech_stack': ['Splunk', 'CrowdStrike', 'SIEM'], 'technical_skills': ['Incident Response', 'Threat Analysis', 'Memory Forensics', 'Malware Analysis', 'APT Lateral Movement Investigation', 'Tabletop Exercises (TTX)', 'Cybersecurity Training', 'Technical Instruction'], 'other_skills': ['Communication Skills', 'Crisis Management', 'Escalation Management', 'Accountability', 'Cross-Functional Team Collaboration', 'Leadership'], 'required_skills': ['Incident Response', 'Threat Analysis', 'SIEM and EDR platforms (Splunk, CrowdStrike)', 'Crisis Management Communication', 'Customer-Facing Skills', 'Technical Expertise', 'Proactive Security Services Delivery'], 'nice_to_have': ['Experience with memory forensics, malware analysis, APT lateral movement investigation or similar', 'Experience designating leading or facilitating Tabletop Exercises (TTX)', 'Background in delivering cybersecurity training, workshops, technical instruction', 'Advanced incident response capabilities', 'Industry certifications (e.g., SANS GIAC, ISC2 CISSP, EC-Council', 'Advanced DFIR certifications (GCIH, GCFA, GCFE)']}
-Extracted skills using openai AI
-Click Failed! Didn't find 'Next'
-Answered the following questions...
-{('Phone country code [ "List of phone country codes" ]', 'Yes', 'select', 'United States (+1)'), ('how many years of work experience do you have with threat analysis?', '5', 'text', ''), ('Email address [  "Select an option", "c_avasamsetti@costco.com", "vmna56@gmail.com", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('mobile phone number', '2542844847', 'text', '2542844847'), ('Have you completed the following level of education: Bachelor\'s Degree? [  "Yes"<Yes>, "No"<No>, ]', 'Yes', 'radio', None), ('how many years of work experience do you have with strategic planning?', '5', 'text', '')}
-Click Failed! Didn't find 'Review'
-Successfully saved "Security Engineer (Incident Response) | The Judge Grou" job. Job ID: 4378979303 info
-
--@-
-
-Skipping "Lead Security Engineer | Insight Globa" job (Blacklisted Company). Job ID: 4391869139!
-
--@-
-
-Trying to Apply to "Systems Engineer | OneChrono" job. Job ID: 4390291132
-HR info was not given for "Systems Engineer" with Job ID: 4390291132!
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
-
-AI Answer to Question:
-
-{'tech_stack': ['Rust', 'C++', 'Java'], 'technical_skills': ['System Architecture', 'Data Engineering', 'System Design', 'Microservices', 'Distributed Systems', 'Low-latency, high-throughput distributed computing', 'Performance optimization', 'Event-driven architectures', 'CI/CD pipelines', 'Automated testing', 'Deployment best practices'], 'other_skills': ['Collaboration', 'Interpersonal skills', 'Leadership', 'Communication', 'Project management'], 'required_skills': ['Systems-level programming language proficiency', 'Passion for high-quality code', 'Detail-oriented with a focus on correctness, consistency, and reliability', 'Comfort working with large-scale data pipelines', 'Ability to write clean, well-tested code', 'Experience with production systems', 'Understanding of operational challenges'], 'nice_to_have': ['Hybrid and remote work flexibility', 'Competitive vacation policy', 'Opportunity to be excited about the business']}
-Extracted skills using openai AI
-Click Failed! Didn't find 'Next'
-Answered the following questions...
-{('Phone country code [ "List of phone country codes" ]', 'Yes', 'select', 'United States (+1)'), ('how many years of engineering experience do you currently have?', '5', 'text', ''), ('Email address [  "Select an option", "c_avasamsetti@costco.com", "vmna56@gmail.com", ]', 'Yes', 'select', 'vmna56@gmail.com'), ('how many years of work experience do you have with c++?', '5', 'text', ''), ('mobile phone number', '2542844847', 'text', '2542844847'), ('how many years of work experience do you have with java?', '5', 'text', ''), ('Have you worked directly on production systems where performance and reliability had significant business or operational impact?  [  "Select an option", "Yes", "No", ]', 'Yes', 'select', 'Select an option'), ('Are you legally authorized to work in the United States? [  "Yes"<Yes>, "No"<No>, ]', '"Yes"<Yes>', 'radio', '"Yes"<Yes>')}
-Click Failed! Didn't find 'Review'
-Successfully saved "Systems Engineer | OneChrono" job. Job ID: 4390291132 info
-
--@-
-
-Trying to Apply to "Security Engineer | Forward Progress Staffin" job. Job ID: 4388306544
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4388306544,https://www.linkedin.com/jobs/view/4388306544,Pending,Unknown,2026-03-31 14:21:51.625130,Found Blacklisted words in About Company,"
+""About the company
 Forward Progress Staffing
 22,276 followers
 Follow
 Staffing and Recruiting 11-50 employees 7 on LinkedIn
 Technical Recruiting\Staffing and IT Services. Specialties include Application Development, Cyber Security, Project Management, Business Analysis, Service Desk, QA, Network Engineering, Database Administration, Data Analysis, Systems Administration and much more!
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Hybrid Systems Engineer - MSP | Bowman William" job. Job ID: 4382176935
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4382176935,https://www.linkedin.com/jobs/view/4382176935,Pending,Unknown,2026-03-31 14:21:55.311124,Found Blacklisted words in About Company,"
+""About the company
 Bowman Williams
 67,102 followers
 Follow
@@ -1130,17 +635,11 @@ If you are currently working in the IT Managed or Cloud Services industry, we ca
 
 Los Angeles | Dallas–Fort Worth | Chicago | New York | Washington, D.C.
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Distributed Systems Engineer | Fabric Staffin" job. Job ID: 4390975797
-
-"About the company
+Contains ""Staffing"".",Skipped,Not Available
+4390975797,https://www.linkedin.com/jobs/view/4390975797,Pending,Unknown,2026-03-31 14:21:59.188075,Found Blacklisted words in About Company,"
+""About the company
 Fabric Staffing
 1,311 followers
 Follow
@@ -1164,16 +663,10 @@ Experience a personalized and practical approach that has already helped the wor
 
 A few of our partners: Twitter (X), Discord, Google, Headspace, Snap, AppliedVR, SquareEnix, Aimi, Puzzel, Mindvalley, Tinder, Grindr, Beats, and many more!
 …
-show more"
+show more""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Senior Security Engineer | MDS (Micro-Data Systems" job. Job ID: 4389781125
-
+Contains ""Staffing"".",Skipped,Not Available
+4389781125,https://www.linkedin.com/jobs/view/4389781125,Pending,2026-03-24 14:22:03.941955,2026-03-31 14:22:04.021237,Found a Bad Word in About Job,"
 About the job
 *****NO C2C OR THIRD PARTY INQUIRIES*****
 
@@ -1209,13 +702,9 @@ Global-scale network design
 Demonstrable Virtualization experience (VMware/Microsoft/Citrix/Linux KVM)
 Desire to learn on your feet and thrive on the bleeding edge of networking.
 
-Contains bad word "No C2C". Skipping this job!
-
-
--@-
-
-Trying to Apply to "Senior CDN Security Engineer (Akamai) | Macy'" job. Job ID: 4382175024
-
+Contains bad word ""No C2C"". Skipping this job!
+",Skipped,Not Available
+4382175024,https://www.linkedin.com/jobs/view/4382175024,Pending,2026-03-10 14:22:09.099530,2026-03-31 14:22:09.177296,Required experience is high,"
 About the job
 Be part of an amazing story.
 Macy’s is more than just a store. We’re a story. One that’s captured the hearts and minds of America for more than 160 years. A story about innovations and traditions…about inspiring stores and irresistible products…about the excitement of the Macy’s 4th of July Fireworks, and the wonder of the Thanksgiving Day Parade. We’ve been part of memorable moments and milestones for countless customers and colleagues. Those stories are part of what makes this such a special place to work.
@@ -1266,13 +755,9 @@ Tuition reimbursement
 Access the full menu of benefits offerings here.
 
 Experience required 7 > Current Experience 5. Skipping this job!
-
-
--@-
-
-Trying to Apply to "System Engineer | Franklin Fitc" job. Job ID: 4385390720
-
-"About the company
+",Skipped,Not Available
+4385390720,https://www.linkedin.com/jobs/view/4385390720,Pending,Unknown,2026-03-31 14:22:12.687571,Found Blacklisted words in About Company,"
+""About the company
 Franklin Fitch
 429,596 followers
 Follow
@@ -1318,50 +803,6 @@ I’m interested
 Company photos
 Page 1 of 7
 Previous
-Next"
+Next""
 
-Contains "Staffing".
-Skipping this job!
-
-
--@-
-
-Trying to Apply to "Platform Engineer | Elios Talen" job. Job ID: 4389589696
-
-About the job
-Platform Engineer (Backend / Infrastructure-Focused)
-
-Engagement Type: Long-Term Contract
-Compensation: $100/hour
-Location: 100% Remote
-
-About the Role
-This role sits at the foundation of the platform — focused on building and scaling the systems that power the product. You’ll work across backend engineering and infrastructure, ensuring the platform is performant, reliable, and built to handle increasing complexity and scale.
-
-This is not a pure DevOps role. It’s a backend-leaning engineering position for someone who understands infrastructure deeply and can make thoughtful decisions about how systems are designed, deployed, and scaled.
-
-What You’ll Do
-• Own and evolve the core platform architecture that underpins the product
-• Design and build scalable backend systems and services
-• Work closely with infrastructure, including system design, workload scaling, and performance optimization
-• Develop and support middleware and service layers that connect core systems
-• Ensure the platform can handle increasing workloads and complexity as the product grows
-• Optimize systems for performance, reliability, and efficiency
-• Support AI and LLM-driven applications by building infrastructure-aware backend systems
-• Partner with engineering teams to align platform capabilities with product needs
-
-What You Bring
-• Strong backend engineering experience building production systems
-• Deep understanding of system design, distributed systems, and infrastructure concepts
-• Experience designing for scale, performance, and reliability
-• Ability to make informed tradeoffs around infrastructure usage and system architecture
-• Comfort working close to infrastructure without being solely focused on DevOps
-• Experience supporting high-scale or compute-heavy workloads
-
-What Stands Out
-• Experience working on platforms that support AI or LLM-driven applications
-• A systems-first mindset — thinking in architecture, not just features
-• Ability to bridge backend engineering and infrastructure decisions
-
-Couldn't find experience requirement in About the Job!
--- EXTRACTING SKILLS FROM JOB DESCRIPTION
+Contains ""Staffing"".",Skipped,Not Available
