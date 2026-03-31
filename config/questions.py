@@ -30,10 +30,10 @@ years_of_experience = "5"          # A number in quotes Eg: "0","1","2","3","4",
 require_visa = "No"               # "Yes" or "No"
 
 # What is the link to your portfolio website, leave it empty as "", if you want to leave this question unanswered
-website = "https://github.com/GodsScion"                        # "www.example.bio" or "" and so on....
+website = "https://github.com/CyberEnthusiastic"                 # "www.example.bio" or "" and so on....
 
 # Please provide the link to your LinkedIn profile.
-linkedIn = "https://www.linkedin.com/in/saivigneshgolla/"       # "https://www.linkedin.com/in/example" or "" and so on...
+linkedIn = "https://www.linkedin.com/in/mohithvasamsetti/"       # "https://www.linkedin.com/in/example" or "" and so on...
 
 # What is the status of your citizenship? # If left empty as "", tool will not answer the question. However, note that some companies make it compulsory to be answered
 # Valid options are: "U.S. Citizen/Permanent Resident", "Non-citizen allowed to work for any employer", "Non-citizen allowed to work for current employer", "Non-citizen seeking work authorization", "Canadian Citizen/Permanent Resident" or "Other"
@@ -44,7 +44,7 @@ us_citizenship = "U.S. Citizen/Permanent Resident"
 ## SOME ANNOYING QUESTIONS BY COMPANIES 🫠 ##
 
 # What to enter in your desired salary question (American and European), What is your expected CTC (South Asian and others)?, only enter in numbers as some companies only allow numbers,
-desired_salary = 1200000          # 80000, 90000, 100000 or 120000 and so on... Do NOT use quotes
+desired_salary = 150000           # 80000, 90000, 100000 or 120000 and so on... Do NOT use quotes
 '''
 Note: If question has the word "lakhs" in it (Example: What is your expected CTC in lakhs), 
 then it will add '.' before last 5 digits and answer. Examples: 
@@ -56,7 +56,7 @@ And if asked in months, then it will divide by 12 and answer. Examples:
 '''
 
 # What is your current CTC? Some companies make it compulsory to be answered in numbers...
-current_ctc = 800000            # 800000, 900000, 1000000 or 1200000 and so on... Do NOT use quotes
+current_ctc = 120000            # 800000, 900000, 1000000 or 1200000 and so on... Do NOT use quotes
 '''
 Note: If question has the word "lakhs" in it (Example: What is your current CTC in lakhs), 
 then it will add '.' before last 5 digits and answer. Examples: 
@@ -71,7 +71,7 @@ then it will add '.' before last 5 digits and answer. Examples:
 # currency = "INR"                 # "USD", "INR", "EUR", etc.
 
 # What is your notice period in days?
-notice_period = 30                   # Any number >= 0 without quotes. Eg: 0, 7, 15, 30, 45, etc.
+notice_period = 0                    # Any number >= 0 without quotes. Eg: 0, 7, 15, 30, 45, etc.
 '''
 Note: If question has 'month' or 'week' in it (Example: What is your notice period in months), 
 then it will divide by 30 or 7 and answer respectively. Examples:
@@ -84,12 +84,11 @@ then it will divide by 30 or 7 and answer respectively. Examples:
 '''
 
 # Your LinkedIn headline in quotes Eg: "Software Engineer @ Google, Masters in Computer Science", "Recent Grad Student @ MIT, Computer Science"
-linkedin_headline = "Full Stack Developer with Masters in Computer Science and 4+ years of experience" # "Headline" or "" to leave this question unanswered
+linkedin_headline = "Security Engineer | AppSec | DevSecOps | Cloud Security | AWS | Kubernetes | 5+ Years Experience" # "Headline" or "" to leave this question unanswered
 
 # Your summary in quotes, use \n to add line breaks if using single quotes "Summary".You can skip \n if using triple quotes """Summary"""
 linkedin_summary = """
-I'm a Senior Software Engineer at Amazon with Masters in CS and 4+ years of experience in developing and maintaining Full Stack Web applications and cloud solutions. 
-Specialized in React, Node.js, and Python.
+Security Engineer with 5+ years securing cloud-native products across AWS, Azure DevOps, and Kubernetes-driven microservices. Deep expertise in threat modeling, secure code review, vulnerability management, and bug bounty program management. Proven track record embedding shift-left security into CI/CD pipelines, enforcing OWASP standards, and building developer-facing tooling at scale. Experienced securing AI/ML environments and mitigating novel attack surfaces including prompt injection and data poisoning risks.
 """
 
 '''
@@ -98,14 +97,50 @@ Note: If left empty as "", the tool will not answer the question. However, note 
 
 # Your cover letter in quotes, use \n to add line breaks if using single quotes "Cover Letter".You can skip \n if using triple quotes """Cover Letter""" (This question makes sense though)
 cover_letter = """
-Cover Letter
+Dear Hiring Manager,
+
+I am writing to express my interest in this security engineering position. With over 5 years of experience in application security, vulnerability management, and cloud security across enterprise organizations including Costco and Amazon, I bring deep expertise in securing cloud-native platforms and CI/CD pipelines.
+
+My background includes deploying SAST/DAST/SCA tools into CI/CD pipelines, conducting penetration testing of Kubernetes workloads and AWS Lambda functions, building Python automation for vulnerability triage and remediation, and managing bug bounty programs via HackerOne. I hold an M.S. in Cybersecurity, AWS Security Specialty, CompTIA Security+, and CISA certifications.
+
+I am excited about the opportunity to contribute my skills to your team and help strengthen your security posture. I look forward to discussing how my experience aligns with your needs.
+
+Best regards,
+Mohith Vasamsetti
 """
 ##> ------ Dheeraj Deshwal : dheeraj9811 Email:dheeraj20194@iiitd.ac.in/dheerajdeshwal9811@gmail.com - Feature ------
 
 # Your user_information_all letter in quotes, use \n to add line breaks if using single quotes "user_information_all".You can skip \n if using triple quotes """user_information_all""" (This question makes sense though)
 # We use this to pass to AI to generate answer from information , Assuing Information contians eg: resume  all the information like name, experience, skills, Country, any illness etc. 
 user_information_all ="""
-User Information
+Name: Mohith Vasamsetti
+Phone: +1 (254) 284-4847
+Email: vmna56@gmail.com
+Location: United States, Open to Relocate
+
+Experience: 5+ years in Security Engineering, Application Security, DevSecOps, and Cloud Security.
+
+Current Role: Security Consultant (Application Security Lead) at Costco Wholesale, Seattle, WA (Nov 2025 - Present)
+- Led threat modeling and secure design reviews for 12+ microservices
+- Built vulnerability management pipeline integrating Snyk, Semgrep, and Dependabot into Azure DevOps CI/CD
+- Administered bug bounty program via HackerOne, validated 45+ submissions
+- Developed Python tooling to prioritize CVE remediation using CVSS scoring
+
+Previous Role: Security Engineer (AppSec & Vulnerability Management) at Amazon, VA, USA (Jan 2025 - Oct 2025)
+- Integrated SAST (Semgrep, CodeQL) and DAST (OWASP ZAP) into AWS CodePipeline
+- Conducted penetration testing of Kubernetes workloads and AWS Lambda functions
+- Automated IAM least-privilege analysis using Python and Boto3
+
+Previous Role: Security Engineer (Application Security Specialist) at Axis Bank, India (Aug 2020 - Jul 2023)
+- Deployed Splunk SIEM to monitor 2M+ daily events
+- Automated vulnerability scanning using Python/Bash scripts
+- Hardened Linux server fleet using CIS benchmarks
+
+Skills: AWS (IAM, Lambda, GuardDuty, Security Hub, Inspector), GCP, Azure, Kubernetes, Docker, Terraform, Threat Modeling, Secure Code Review, Vulnerability Management, Bug Bounty (HackerOne), OWASP Top 10, Snyk, Semgrep, CodeQL, OWASP ZAP, Burp Suite, Splunk, Python, Go, Bash, JavaScript/TypeScript, Rust, SOC 2, PCI-DSS, ISO 27001, NIST CSF, FedRAMP, CIS Benchmarks
+
+Education: M.S. Cybersecurity & Information Assurance - University of Central Missouri, USA; B.Tech Computer Science - DVR & DrHS MIC College of Technology, India
+
+Certifications: AWS Certified Security - Specialty, CompTIA Security+, CISA
 """
 ##<
 '''
@@ -113,10 +148,10 @@ Note: If left empty as "", the tool will not answer the question. However, note 
 ''' 
 
 # Name of your most recent employer
-recent_employer = "Not Applicable" # "", "Lala Company", "Google", "Snowflake", "Databricks"
+recent_employer = "Costco Wholesale" # "", "Lala Company", "Google", "Snowflake", "Databricks"
 
 # Example question: "On a scale of 1-10 how much experience do you have building web or mobile applications? 1 being very little or only in school, 10 being that you have built and launched applications to real users"
-confidence_level = "8"             # Any number between "1" to "10" including 1 and 10, put it in quotes ""
+confidence_level = "9"             # Any number between "1" to "10" including 1 and 10, put it in quotes ""
 ##
 
 
