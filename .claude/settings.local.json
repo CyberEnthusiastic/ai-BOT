@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr:*)",
+      "Bash(where gh:*)",
+      "Bash(winget install:*)",
+      "Bash(export PATH=\"/c/Program Files/GitHub CLI:$PATH\")",
+      "Bash(gh auth:*)",
+      "Bash(pip install:*)",
+      "Read(//c/asus/Hand made ATS/**)",
+      "Bash(ls *.docx)",
+      "Bash(where python:*)",
+      "Bash(where python3:*)",
+      "Bash(python -c \":*)",
+      "Bash('/c/Program Files/Python311/python' -m pip install python-docx)",
+      "Bash(\"/c/Program Files/Python311/python\" -c \":*)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Bash(where npm:*)",
+      "Bash(where node:*)",
+      "Read(//c/Program Files/nodejs/**)",
+      "Read(//c/Users/vmnad/OneDrive/Documents/Cyber github/ai-BOT/.claude/worktrees/angry-taussig/$APPDATA/npm/**)",
+      "Read(//c/Users/vmnad/OneDrive/Documents/Cyber github/ai-BOT/.claude/worktrees/angry-taussig/$LOCALAPPDATA/Programs/**)",
+      "Read(//c/Program Files/**)",
+      "Bash(python create_resume.py)",
+      "Bash(git pull:*)",
+      "Bash(git rm:*)",
+      "Bash(where ollama:*)",
+      "Bash(ollama --version)"
+    ]
+  }
+}
