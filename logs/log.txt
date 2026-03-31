@@ -1,0 +1,105 @@
+IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
+Logging in with a guest profile, Web history will not be saved!
+Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
+Failed to create Chrome Session, retrying with guest profile
+Message: session not created: cannot connect to chrome at 127.0.0.1:57185
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	undetected_chromedriver!GetHandleVerifier [0x8625e3+10dd3]
+	undetected_chromedriver!GetHandleVerifier [0x862714+10f04]
+	undetected_chromedriver!(No symbol) [0x631f0e]
+	undetected_chromedriver!(No symbol) [0x625708]
+	undetected_chromedriver!(No symbol) [0x66c542]
+	undetected_chromedriver!(No symbol) [0x662865]
+	undetected_chromedriver!(No symbol) [0x662686]
+	undetected_chromedriver!(No symbol) [0x6a9dbf]
+	undetected_chromedriver!(No symbol) [0x6a95d7]
+	undetected_chromedriver!(No symbol) [0x69d986]
+	undetected_chromedriver!(No symbol) [0x6702f9]
+	undetected_chromedriver!(No symbol) [0x6710b4]
+	undetected_chromedriver!GetHandleVerifier [0xac2d54+271544]
+	undetected_chromedriver!GetHandleVerifier [0xabe399+26cb89]
+	undetected_chromedriver!GetHandleVerifier [0xadcc45+28b435]
+	undetected_chromedriver!GetHandleVerifier [0x87cee8+2b6d8]
+	undetected_chromedriver!GetHandleVerifier [0x884f1d+3370d]
+	undetected_chromedriver!GetHandleVerifier [0x86af68+19758]
+	undetected_chromedriver!GetHandleVerifier [0x86b132+19922]
+	undetected_chromedriver!GetHandleVerifier [0x8540cf+28bf]
+	KERNEL32!BaseThreadInitThunk [0x74ad5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x76fad81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x76fad7a1+231]
+
+2026-03-31 13:55:29.364305
+IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
+Will login with a guest profile, browsing history will not be saved in the browser!
+Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
+IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
+Logging in with a guest profile, Web history will not be saved!
+Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
+Failed to create Chrome Session, retrying with guest profile
+Message: session not created: cannot connect to chrome at 127.0.0.1:49985
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	undetected_chromedriver!GetHandleVerifier [0xe925e3+10dd3]
+	undetected_chromedriver!GetHandleVerifier [0xe92714+10f04]
+	undetected_chromedriver!(No symbol) [0xc61f0e]
+	undetected_chromedriver!(No symbol) [0xc55708]
+	undetected_chromedriver!(No symbol) [0xc9c542]
+	undetected_chromedriver!(No symbol) [0xc92865]
+	undetected_chromedriver!(No symbol) [0xc92686]
+	undetected_chromedriver!(No symbol) [0xcd9dbf]
+	undetected_chromedriver!(No symbol) [0xcd95d7]
+	undetected_chromedriver!(No symbol) [0xccd986]
+	undetected_chromedriver!(No symbol) [0xca02f9]
+	undetected_chromedriver!(No symbol) [0xca10b4]
+	undetected_chromedriver!GetHandleVerifier [0x10f2d54+271544]
+	undetected_chromedriver!GetHandleVerifier [0x10ee399+26cb89]
+	undetected_chromedriver!GetHandleVerifier [0x110cc45+28b435]
+	undetected_chromedriver!GetHandleVerifier [0xeacee8+2b6d8]
+	undetected_chromedriver!GetHandleVerifier [0xeb4f1d+3370d]
+	undetected_chromedriver!GetHandleVerifier [0xe9af68+19758]
+	undetected_chromedriver!GetHandleVerifier [0xe9b132+19922]
+	undetected_chromedriver!GetHandleVerifier [0xe840cf+28bf]
+	KERNEL32!BaseThreadInitThunk [0x74ad5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x76fad81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x76fad7a1+231]
+
+2026-03-31 13:58:36.103105
+IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
+Will login with a guest profile, browsing history will not be saved in the browser!
+Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
+IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
+Logging in with a guest profile, Web history will not be saved!
+Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
+Failed to create Chrome Session, retrying with guest profile
+Message: session not created: cannot connect to chrome at 127.0.0.1:62106
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	undetected_chromedriver!GetHandleVerifier [0xc825e3+10dd3]
+	undetected_chromedriver!GetHandleVerifier [0xc82714+10f04]
+	undetected_chromedriver!(No symbol) [0xa51f0e]
+	undetected_chromedriver!(No symbol) [0xa45708]
+	undetected_chromedriver!(No symbol) [0xa8c542]
+	undetected_chromedriver!(No symbol) [0xa82865]
+	undetected_chromedriver!(No symbol) [0xa82686]
+	undetected_chromedriver!(No symbol) [0xac9dbf]
+	undetected_chromedriver!(No symbol) [0xac95d7]
+	undetected_chromedriver!(No symbol) [0xabd986]
+	undetected_chromedriver!(No symbol) [0xa902f9]
+	undetected_chromedriver!(No symbol) [0xa910b4]
+	undetected_chromedriver!GetHandleVerifier [0xee2d54+271544]
+	undetected_chromedriver!GetHandleVerifier [0xede399+26cb89]
+	undetected_chromedriver!GetHandleVerifier [0xefcc45+28b435]
+	undetected_chromedriver!GetHandleVerifier [0xc9cee8+2b6d8]
+	undetected_chromedriver!GetHandleVerifier [0xca4f1d+3370d]
+	undetected_chromedriver!GetHandleVerifier [0xc8af68+19758]
+	undetected_chromedriver!GetHandleVerifier [0xc8b132+19922]
+	undetected_chromedriver!GetHandleVerifier [0xc740cf+28bf]
+	KERNEL32!BaseThreadInitThunk [0x74ad5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x76fad81b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x76fad7a1+231]
+
+2026-03-31 14:01:24.472952
+IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!
+Will login with a guest profile, browsing history will not be saved in the browser!
+Downloading Chrome Driver... This may take some time. Undetected mode requires download every run!
