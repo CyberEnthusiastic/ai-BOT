@@ -80,7 +80,14 @@
       "Bash(mkdir -p reports)",
       "Bash(touch reports/.gitkeep)",
       "Bash(python itdr.py)",
-      "Bash(python -c ':*)"
+      "Bash(python -c ':*)",
+      "Bash(python daily_updater.py)",
+      "Bash(schtasks /create /tn \"SecurityRepoUpdater\" /tr \"python \\\\\"C:\\\\Users\\\\vmnad\\\\security-projects\\\\daily_updater.py\\\\\"\" /sc daily /st 09:00 /f)",
+      "Bash(cmd.exe //c \"schtasks /create /tn \\\\\"SecurityRepoUpdater\\\\\" /tr \\\\\"python C:\\\\\\\\Users\\\\\\\\vmnad\\\\\\\\security-projects\\\\\\\\daily_updater.py\\\\\" /sc daily /st 09:00 /f\")",
+      "Bash(cp \"/c/Users/vmnad/security-projects/_shared/license_guard.py\" .)",
+      "Bash(python firewall.py scan --no-intel)",
+      "Bash(python firewall.py update)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('rules/threat_intel_ips.json'\\)\\); print\\(f'Blocked IPs loaded: {len\\(d[0][\\\\\"ips\\\\\"]\\)}'\\)\")"
     ]
   }
 }
