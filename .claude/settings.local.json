@@ -89,7 +89,9 @@
       "Bash(python firewall.py update)",
       "Bash(python -c \"import json; d=json.load\\(open\\('rules/threat_intel_ips.json'\\)\\); print\\(f'Blocked IPs loaded: {len\\(d[0][\\\\\"ips\\\\\"]\\)}'\\)\")",
       "Bash(python -c \"from flask_cors import CORS; print\\('flask-cors OK'\\)\")",
-      "Bash([ -f \"$repo_path/README.md\" ])"
+      "Bash([ -f \"$repo_path/README.md\" ])",
+      "Bash(python master_setup.py status --dir \"/c/Users/vmnad/security-projects\")",
+      "Bash(netstat -ano)"
     ]
   }
 }
