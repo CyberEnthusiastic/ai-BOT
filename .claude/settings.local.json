@@ -91,7 +91,14 @@
       "Bash(python -c \"from flask_cors import CORS; print\\('flask-cors OK'\\)\")",
       "Bash([ -f \"$repo_path/README.md\" ])",
       "Bash(python master_setup.py status --dir \"/c/Users/vmnad/security-projects\")",
-      "Bash(netstat -ano)"
+      "Bash(netstat -ano)",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); d['smtp']['password']='***'; print\\(json.dumps\\(d,indent=2\\)\\)\")",
+      "WebSearch",
+      "Bash(curl -s \"https://api.github.com/users/CyberEnthusiastic/repos?sort=pushed&per_page=30\")",
+      "Bash(wait)",
+      "Bash(python -m http.server 8888)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" http://127.0.0.1:8888/ai-sast-scanner/reports/sast_report.html)",
+      "Bash(pkill -f \"python -m http.server 8888\")"
     ]
   }
 }
