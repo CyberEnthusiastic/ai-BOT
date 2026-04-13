@@ -1,3 +1,12 @@
+# ══════════════════════════════════════════════════════════════════════════════
+#  Nova v2 — Python dependencies
+#
+#  FREE stack (no paid API keys needed beyond OpenAI for the LLM brain):
+#    pip install -r requirements.txt
+#
+#  Optional premium add-ons are marked [OPTIONAL] — Nova works without them.
+# ══════════════════════════════════════════════════════════════════════════════
+
 # ── Core async / web ──────────────────────────────────────────────────────────
 fastapi>=0.111.0
 uvicorn[standard]>=0.29.0
@@ -10,11 +19,18 @@ httpx>=0.27.0
 openai>=1.30.0
 openai-agents>=0.0.6
 
-# ── Speech-to-text ───────────────────────────────────────────────────────────
+# ── Speech-to-text (Whisper — free, runs locally) ────────────────────────────
 faster-whisper>=1.0.1
 
 # ── Wake word ────────────────────────────────────────────────────────────────
-pvporcupine>=3.0.0
+# FREE: openwakeword — offline keyword detection, no API key required
+#   Built-in models: hey_jarvis, alexa, hey_mycroft, ...
+#   Train custom "hey_nova": https://github.com/dscripka/openWakeWord
+openwakeword>=0.6.0
+
+# [OPTIONAL] Picovoice Porcupine — premium wake word (requires free API key)
+#   Only needed when WAKEWORD_ENGINE=porcupine
+# pvporcupine>=3.0.0
 
 # ── Voice Activity Detection ─────────────────────────────────────────────────
 silero-vad>=5.0
@@ -25,8 +41,18 @@ torchaudio>=2.2.0
 speechbrain>=1.0.0
 
 # ── TTS ──────────────────────────────────────────────────────────────────────
-elevenlabs>=1.2.0
-pywin32>=306
+# FREE: Microsoft Edge TTS — natural voices, no API key, internet required
+edge-tts>=6.1.9
+
+# FREE: pyttsx3 — offline TTS, works without internet
+pyttsx3>=2.90
+
+# Windows audio support (required for pyttsx3 SAPI backend)
+pywin32>=306; sys_platform == "win32"
+
+# [OPTIONAL] ElevenLabs — ultra-realistic voices (requires paid API key)
+#   Only used when ELEVENLABS_API_KEY is set or TTS_ENGINE=elevenlabs
+# elevenlabs>=1.2.0
 
 # ── Audio I/O ────────────────────────────────────────────────────────────────
 pyaudio>=0.2.14
@@ -69,6 +95,6 @@ pynput>=1.7.6
 psutil>=5.9.8
 keyboard>=0.13.5
 
-# ── System tray icon (Phase 4) ────────────────────────────────────────────────
+# ── System tray icon ─────────────────────────────────────────────────────────
 pystray>=0.19.5
 # Pillow already listed above (>=10.3.0)

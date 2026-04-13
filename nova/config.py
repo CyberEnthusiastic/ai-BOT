@@ -54,19 +54,35 @@ def _float(key: str, default: float) -> float:
 
 
 # ── Global ────────────────────────────────────────────────────────────────────
-MOCK_MODE: bool = _bool("MOCK_MODE", "true")
+MOCK_MODE: bool = _bool("MOCK_MODE", "false")   # default live — free engines need no API keys
 NOVA_OWNER_NAME: str = os.getenv("NOVA_OWNER_NAME", "User")
 
-# ── OpenAI ───────────────────────────────────────────────────────────────────
+# ── OpenAI (required for the brain/LLM; optional for TTS) ────────────────────
 OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4o")
 
-# ── ElevenLabs ───────────────────────────────────────────────────────────────
+# ── ElevenLabs (optional premium TTS — falls back to edge-tts if absent) ─────
 ELEVENLABS_API_KEY: str = os.getenv("ELEVENLABS_API_KEY", "")
 ELEVENLABS_VOICE_ID: str = os.getenv("ELEVENLABS_VOICE_ID", "21m00Tcm4TlvDq8ikWAM")
 
-# ── Porcupine ────────────────────────────────────────────────────────────────
+# ── Wake-word engine ──────────────────────────────────────────────────────────
+# "openwakeword" — free, offline, no API key (default)
+# "porcupine"    — Picovoice Porcupine (requires PORCUPINE_ACCESS_KEY)
+WAKEWORD_ENGINE: str = os.getenv("WAKEWORD_ENGINE", "openwakeword")
+OPENWAKEWORD_MODEL: str = os.getenv("OPENWAKEWORD_MODEL", "hey_jarvis")
+# ^ Built-in models shipped with openwakeword.  Train a custom "hey_nova" model
+#   and set OPENWAKEWORD_MODEL=hey_nova to use it.
+
+# ── Porcupine (optional — only used when WAKEWORD_ENGINE=porcupine) ───────────
 PORCUPINE_ACCESS_KEY: str = os.getenv("PORCUPINE_ACCESS_KEY", "")
+
+# ── TTS engine ────────────────────────────────────────────────────────────────
+# "edge"       — Microsoft Edge TTS via edge-tts (free, no key) ← default
+# "elevenlabs" — ElevenLabs (requires ELEVENLABS_API_KEY)
+# "openai"     — OpenAI TTS-1 (requires OPENAI_API_KEY)
+# "pyttsx3"    — Windows/Mac offline TTS, no internet
+TTS_ENGINE: str = os.getenv("TTS_ENGINE", "edge")
+EDGE_TTS_VOICE: str = os.getenv("EDGE_TTS_VOICE", "en-GB-SoniaNeural")
 
 # ── Speaker verification ─────────────────────────────────────────────────────
 SPEAKER_THRESHOLD: float = _float("SPEAKER_THRESHOLD", 0.65)
@@ -119,20 +135,31 @@ def get_config() -> dict:
         "mock_mode": MOCK_MODE,
         "nova_owner_name": NOVA_OWNER_NAME,
         "openai_model": OPENAI_MODEL,
+        # TTS
+        "tts_engine": TTS_ENGINE,
+        "edge_tts_voice": EDGE_TTS_VOICE,
         "elevenlabs_voice_id": ELEVENLABS_VOICE_ID,
-        "speaker_threshold": SPEAKER_THRESHOLD,
-        "host": HOST,
-        "port": PORT,
-        "log_level": LOG_LEVEL,
-        "audit_log_enabled": AUDIT_LOG_ENABLED,
-        "safety_block_critical": SAFETY_BLOCK_CRITICAL,
-        "safety_confirm_high": SAFETY_CONFIRM_HIGH,
+        # Wake word
+        "wakeword_engine": WAKEWORD_ENGINE,
+        "openwakeword_model": OPENWAKEWORD_MODEL,
         "wake_methods": WAKE_METHODS,
+        # Clap
         "clap_enabled": CLAP_ENABLED,
         "clap_threshold": CLAP_THRESHOLD,
         "clap_min_gap": CLAP_MIN_GAP,
         "clap_max_gap": CLAP_MAX_GAP,
         "clap_debounce": CLAP_DEBOUNCE,
+        # Speaker
+        "speaker_threshold": SPEAKER_THRESHOLD,
+        # Server
+        "host": HOST,
+        "port": PORT,
+        # Logging / safety
+        "log_level": LOG_LEVEL,
+        "audit_log_enabled": AUDIT_LOG_ENABLED,
+        "safety_block_critical": SAFETY_BLOCK_CRITICAL,
+        "safety_confirm_high": SAFETY_CONFIRM_HIGH,
+        # Routines / TTS cache / proactive
         "routine_enabled": ROUTINE_ENABLED,
         "tts_cache_enabled": TTS_CACHE_ENABLED,
         "tts_cache_max_size": TTS_CACHE_MAX_SIZE,
