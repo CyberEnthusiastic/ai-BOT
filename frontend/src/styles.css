@@ -1,0 +1,286 @@
+/* Nova v2 — Dark theme, full-viewport orb UI */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #030308;
+  --orb-idle:     #1a4fff;
+  --orb-listen:   #00ff88;
+  --orb-think:    #ff8800;
+  --orb-speak:    #00e5ff;
+  --orb-error:    #ff2244;
+  --text-primary: #e8eaf6;
+  --text-dim:     #7986cb;
+  --panel-bg:     rgba(5, 8, 20, 0.75);
+  --panel-border: rgba(100, 130, 255, 0.18);
+  --input-bg:     rgba(10, 15, 35, 0.9);
+  --btn-bg:       rgba(30, 50, 120, 0.8);
+  --btn-hover:    rgba(50, 80, 200, 0.9);
+  --approve-yes:  #00c853;
+  --approve-no:   #ff1744;
+  --font-mono:    'Courier New', Courier, monospace;
+  --font-ui:      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  user-select: none;
+}
+
+/* ── Three.js canvas ──────────────────────────────────────────────────────── */
+#orb-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── UI overlay ───────────────────────────────────────────────────────────── */
+#ui-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2.5rem;
+  pointer-events: none;
+}
+
+/* Nova wordmark */
+#nova-label {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.6em;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* State text below orb */
+#status-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 110px);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  transition: color 0.5s ease, opacity 0.4s ease;
+  pointer-events: none;
+}
+
+#status-text.state-idle     { color: #3d5afe; }
+#status-text.state-listening{ color: #00e676; }
+#status-text.state-thinking { color: #ff9100; }
+#status-text.state-speaking { color: #00e5ff; }
+#status-text.state-error    { color: #ff1744; }
+
+/* ── Transcript box ───────────────────────────────────────────────────────── */
+#transcript-box {
+  width: min(680px, 90vw);
+  max-height: 180px;
+  overflow-y: auto;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(12px);
+  pointer-events: all;
+  scrollbar-width: thin;
+  scrollbar-color: #3d5afe transparent;
+}
+
+#transcript-box:empty,
+#transcript-box:has(#transcript-inner:empty) {
+  display: none;
+}
+
+#transcript-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.msg-user {
+  align-self: flex-end;
+  background: rgba(61, 90, 254, 0.25);
+  border: 1px solid rgba(61, 90, 254, 0.4);
+  border-radius: 10px 10px 2px 10px;
+  padding: 0.4rem 0.75rem;
+  color: #c5cae9;
+  max-width: 80%;
+}
+
+.msg-nova {
+  align-self: flex-start;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 10px 10px 10px 2px;
+  padding: 0.4rem 0.75rem;
+  color: var(--text-primary);
+  max-width: 90%;
+  white-space: pre-wrap;
+}
+
+.msg-nova.approval-prompt {
+  border-color: rgba(255, 145, 0, 0.5);
+  background: rgba(255, 145, 0, 0.1);
+}
+
+/* ── Controls row ─────────────────────────────────────────────────────────── */
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: min(680px, 90vw);
+  pointer-events: all;
+}
+
+#text-input {
+  flex: 1;
+  background: var(--input-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: var(--font-ui);
+  outline: none;
+  transition: border-color 0.25s;
+  caret-color: #3d5afe;
+}
+
+#text-input:focus {
+  border-color: rgba(100, 130, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(61, 90, 254, 0.15);
+}
+
+#text-input::placeholder { color: #3d4a7a; }
+
+button {
+  background: var(--btn-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  pointer-events: all;
+  flex-shrink: 0;
+}
+
+button:hover  { background: var(--btn-hover); }
+button:active { transform: scale(0.93); }
+
+#mic-btn.recording {
+  background: rgba(0, 230, 118, 0.35);
+  border-color: rgba(0, 230, 118, 0.6);
+  animation: mic-pulse 1s ease-in-out infinite;
+}
+
+@keyframes mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(0, 230, 118, 0); }
+}
+
+/* ── Approval panel ───────────────────────────────────────────────────────── */
+#approval-panel {
+  width: min(680px, 90vw);
+  background: var(--panel-bg);
+  border: 1px solid rgba(255, 145, 0, 0.35);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 0.75rem;
+  backdrop-filter: blur(12px);
+  pointer-events: all;
+  animation: slide-up 0.25s ease;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#approval-panel.hidden { display: none; }
+
+#approval-text {
+  font-size: 0.85rem;
+  color: #ffcc80;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+#approval-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+#approve-yes {
+  background: rgba(0, 200, 83, 0.25);
+  border-color: rgba(0, 200, 83, 0.5);
+  width: auto;
+  padding: 0 1.2rem;
+  height: 2.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+#approve-yes:hover { background: rgba(0, 200, 83, 0.45); }
+
+#approve-no {
+  background: rgba(255, 23, 68, 0.2);
+  border-color: rgba(255, 23, 68, 0.4);
+  width: auto;
+  padding: 0 1.2rem;
+  height: 2.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+#approve-no:hover { background: rgba(255, 23, 68, 0.4); }
+
+/* ── Connection badge ─────────────────────────────────────────────────────── */
+#connection-badge {
+  position: fixed;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  transition: color 0.4s;
+  pointer-events: none;
+}
+
+#connection-badge.online  { color: #00e676; }
+#connection-badge.offline { color: #ff1744; }
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+#transcript-box::-webkit-scrollbar { width: 4px; }
+#transcript-box::-webkit-scrollbar-track { background: transparent; }
+#transcript-box::-webkit-scrollbar-thumb { background: #3d5afe; border-radius: 2px; }

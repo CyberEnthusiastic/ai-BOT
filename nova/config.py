@@ -106,3 +106,35 @@ TTS_CACHE_MAX_SIZE: int = _int("TTS_CACHE_MAX_SIZE", 100)  # max number of entri
 
 # ── Proactive suggestions ────────────────────────────────────────────────────
 PROACTIVE_SUGGESTIONS: bool = _bool("PROACTIVE_SUGGESTIONS", "true")
+
+
+# ── Convenience accessor ──────────────────────────────────────────────────────
+
+def get_config() -> dict:
+    """Return all current config values as a plain dict.
+
+    Useful for health checks, settings API, and test introspection.
+    """
+    return {
+        "mock_mode": MOCK_MODE,
+        "nova_owner_name": NOVA_OWNER_NAME,
+        "openai_model": OPENAI_MODEL,
+        "elevenlabs_voice_id": ELEVENLABS_VOICE_ID,
+        "speaker_threshold": SPEAKER_THRESHOLD,
+        "host": HOST,
+        "port": PORT,
+        "log_level": LOG_LEVEL,
+        "audit_log_enabled": AUDIT_LOG_ENABLED,
+        "safety_block_critical": SAFETY_BLOCK_CRITICAL,
+        "safety_confirm_high": SAFETY_CONFIRM_HIGH,
+        "wake_methods": WAKE_METHODS,
+        "clap_enabled": CLAP_ENABLED,
+        "clap_threshold": CLAP_THRESHOLD,
+        "clap_min_gap": CLAP_MIN_GAP,
+        "clap_max_gap": CLAP_MAX_GAP,
+        "clap_debounce": CLAP_DEBOUNCE,
+        "routine_enabled": ROUTINE_ENABLED,
+        "tts_cache_enabled": TTS_CACHE_ENABLED,
+        "tts_cache_max_size": TTS_CACHE_MAX_SIZE,
+        "proactive_suggestions": PROACTIVE_SUGGESTIONS,
+    }
