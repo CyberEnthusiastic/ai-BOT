@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova v2</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- Three.js canvas fills full viewport -->
+    <canvas id="orb-canvas"></canvas>
+
+    <!-- Status / transcript overlay -->
+    <div id="ui-overlay">
+      <div id="nova-label">NOVA</div>
+      <div id="status-text">Initializing…</div>
+      <div id="transcript-box">
+        <div id="transcript-inner"></div>
+      </div>
+      <div id="controls">
+        <input
+          id="text-input"
+          type="text"
+          placeholder="Type a command…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="send-btn" title="Send">&#9654;</button>
+        <button id="mic-btn" title="Hold to speak">&#127908;</button>
+      </div>
+      <div id="approval-panel" class="hidden">
+        <div id="approval-text"></div>
+        <div id="approval-buttons">
+          <button id="approve-yes">Yes, proceed</button>
+          <button id="approve-no">No, cancel</button>
+        </div>
+      </div>
+      <div id="connection-badge" class="offline">●</div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

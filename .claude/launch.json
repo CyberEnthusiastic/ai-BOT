@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ai-bot",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["app.py"],
+      "port": 5000
+    },
+    {
+      "name": "security-command-center",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["C:\\Users\\vmnad\\security-projects\\security-command-center\\server.py"],
+      "port": 5500
+    },
+    {
+      "name": "prompt-injection-proxy",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["C:\\Users\\vmnad\\security-projects\\prompt-injection-proxy\\proxy.py"],
+      "port": 5001
+    },
+    {
+      "name": "waf-mock-target",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["C:\\Users\\vmnad\\security-projects\\waf-bypass-lab\\mock_target.py", "8088"],
+      "port": 8088
+    },
+    {
+      "name": "portfolio-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8000", "--directory", "C:\\Users\\vmnad\\security-projects\\mohith-portfolio"],
+      "port": 8000
+    }
+  ]
+}
