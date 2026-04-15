@@ -11,14 +11,34 @@ REST endpoints
   PUT  /routines/{name}         — enable/disable a routine
   GET  /tts-cache/stats         — TTS cache statistics
   GET  /performance             — last 50 timing entries
-  WS   /ws                      — bidirectional text command channel
+
+WebSocket /ws
+-------------
+  Client → Server message types:
+    ping                         — keepalive (server replies "pong")
+    text_input   {text}          — run text command through pipeline
+    voice_input  {audio: b64}    — base64 WebM audio → STT → pipeline
+    approval     {approved: bool}— user answer to approval_required prompt
+
+  Server → Client message types:
+    connected    {mock_mode}     — handshake on connect
+    pong                         — ping reply
+    state        {state}         — orb state: idle|listening|thinking|speaking|error
+    thinking                     — agent is processing (also triggers state→thinking)
+    transcribed  {text}          — STT result after voice_input
+    response     {text, audio?}  — agent reply; audio is base64 MP3 when TTS succeeds
+    approval_required {description, risk_level, prompt} — user must approve/deny
+    blocked      {detail}        — guardrails or policy blocked the request
+    error        {detail}        — unexpected server error
 """
 
 from __future__ import annotations
 
 import asyncio
+import base64
 import json
 import os
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -38,6 +58,7 @@ from nova.config import (
     PORT,
     PROACTIVE_SUGGESTIONS,
     ROUTINE_ENABLED,
+    SAFETY_CONFIRM_HIGH,
     TTS_CACHE_ENABLED,
     TTS_CACHE_DIR,
     TTS_CACHE_MAX_SIZE,
@@ -60,6 +81,9 @@ app.add_middleware(
 
 # ── In-memory connection registry ────────────────────────────────────────────
 _connections: set[WebSocket] = set()
+
+# Per-connection approval futures (keyed by id(ws))
+_approval_futures: dict[int, "asyncio.Future[bool]"] = {}
 
 
 # ── REST endpoints ───────────────────────────────────────────────────────────
@@ -243,10 +267,20 @@ async def websocket_endpoint(ws: WebSocket) -> None:
                 await ws.send_json({"type": "pong"})
 
             elif msg_type == "text_input":
-                # Allow frontend to submit text commands directly (useful in mock mode)
                 text = str(msg.get("text", "")).strip()
                 if text:
                     asyncio.create_task(_handle_text(ws, text))
+
+            elif msg_type == "voice_input":
+                audio_b64 = str(msg.get("audio", ""))
+                if audio_b64:
+                    asyncio.create_task(_handle_voice(ws, audio_b64))
+
+            elif msg_type == "approval":
+                # Resolve a pending approval future for this connection
+                fut = _approval_futures.get(id(ws))
+                if fut and not fut.done():
+                    fut.set_result(bool(msg.get("approved", False)))
 
             else:
                 await ws.send_json({"type": "error", "detail": f"unknown type: {msg_type}"})
@@ -255,7 +289,13 @@ async def websocket_endpoint(ws: WebSocket) -> None:
         pass
     finally:
         _connections.discard(ws)
+        # Cancel any pending approval for this connection
+        fut = _approval_futures.pop(id(ws), None)
+        if fut and not fut.done():
+            fut.cancel()
 
+
+# ── Broadcast helpers ─────────────────────────────────────────────────────────
 
 async def broadcast(payload: dict[str, Any]) -> None:
     """Push a message to all connected WebSocket clients."""
@@ -268,29 +308,156 @@ async def broadcast(payload: dict[str, Any]) -> None:
     _connections.difference_update(dead)
 
 
+async def broadcast_state(state: str) -> None:
+    """Broadcast an orb state change to all connected clients."""
+    await broadcast({"type": "state", "state": state})
+
+
+# ── Approval flow ─────────────────────────────────────────────────────────────
+
+async def _request_approval(ws: WebSocket, description: str, risk_level: str) -> bool:
+    """Ask the connected client to approve a HIGH/CRITICAL action.
+
+    Sends approval_required, waits up to 30 s for an 'approval' reply.
+    Returns False on timeout or denial.
+    """
+    loop = asyncio.get_event_loop()
+    fut: asyncio.Future[bool] = loop.create_future()
+    _approval_futures[id(ws)] = fut
+    try:
+        await ws.send_json(
+            {
+                "type": "approval_required",
+                "description": description,
+                "risk_level": risk_level,
+                "prompt": f"Allow {risk_level} action: {description}?",
+            }
+        )
+        return await asyncio.wait_for(asyncio.shield(fut), timeout=30.0)
+    except asyncio.TimeoutError:
+        print(f"[Server] Approval timeout for: {description}")
+        return False
+    finally:
+        _approval_futures.pop(id(ws), None)
+
+
+# ── Voice input handler ───────────────────────────────────────────────────────
+
+async def _handle_voice(ws: WebSocket, audio_b64: str) -> None:
+    """Decode incoming base64 audio (WebM from browser), run STT, then pipeline."""
+    from nova.speech.stt import STT
+
+    await broadcast_state("listening")
+    tmp_path: str | None = None
+    try:
+        raw = base64.b64decode(audio_b64)
+        with tempfile.NamedTemporaryFile(suffix=".webm", delete=False) as tf:
+            tf.write(raw)
+            tmp_path = tf.name
+
+        stt = STT()
+        text = await stt.transcribe_file(tmp_path)
+
+        if text:
+            await ws.send_json({"type": "transcribed", "text": text})
+            await _handle_text(ws, text)
+        else:
+            await broadcast_state("idle")
+    except Exception as exc:
+        print(f"[Server] voice_input error: {exc}")
+        await ws.send_json({"type": "error", "detail": "Voice transcription failed."})
+        await broadcast_state("error")
+    finally:
+        if tmp_path:
+            try:
+                Path(tmp_path).unlink()
+            except OSError:
+                pass
+
+
+# ── Text pipeline handler ─────────────────────────────────────────────────────
+
 async def _handle_text(ws: WebSocket, text: str) -> None:
-    """Process a text command from the WebSocket and stream the response."""
+    """Run text through guardrails → optional approval → agent → TTS → respond."""
     from nova.brain.agents import AgentOrchestrator
     from nova.safety.guardrails import Guardrails
+    from nova.safety.governance import classify, RiskLevel
     from nova.memory.store import MemoryStore
+    from nova.voice.tts import TTS
 
     guardrails = Guardrails()
+
+    # ── Input guardrails ──────────────────────────────────────────────────────
     if not guardrails.check_input(text):
-        await ws.send_json({"type": "blocked", "detail": "input blocked by guardrails"})
+        await ws.send_json({"type": "blocked", "detail": "Input blocked by safety guardrails."})
+        await broadcast_state("error")
         return
 
+    # ── Pre-classify risk; ask for approval if HIGH/CRITICAL ─────────────────
+    if SAFETY_CONFIRM_HIGH:
+        assessment = classify("", "", context=text)
+        if assessment.level == RiskLevel.BLOCKED:
+            await ws.send_json(
+                {"type": "blocked", "detail": f"Action blocked: {assessment.reason}"}
+            )
+            await broadcast_state("error")
+            return
+        if assessment.level in (RiskLevel.HIGH, RiskLevel.CRITICAL):
+            approved = await _request_approval(ws, assessment.reason, assessment.level.name)
+            if not approved:
+                await ws.send_json(
+                    {
+                        "type": "blocked",
+                        "detail": f"Action not approved ({assessment.level.name}: {assessment.reason})",
+                    }
+                )
+                await broadcast_state("idle")
+                return
+
+    # ── Run agent ─────────────────────────────────────────────────────────────
+    await broadcast_state("thinking")
     await ws.send_json({"type": "thinking"})
 
-    orchestrator = AgentOrchestrator()
-    reply = await orchestrator.run(text)
+    try:
+        orchestrator = AgentOrchestrator()
+        reply = await orchestrator.run(text)
+    except Exception as exc:
+        print(f"[Server] Agent error: {exc}")
+        await ws.send_json({"type": "error", "detail": "Agent encountered an error."})
+        await broadcast_state("error")
+        return
 
     safe_reply = guardrails.redact_output(reply)
 
-    store = MemoryStore()
-    await store.init()
-    await store.add_episode(user_text=text, nova_text=safe_reply)
+    # ── Persist to memory ─────────────────────────────────────────────────────
+    try:
+        store = MemoryStore()
+        await store.init()
+        await store.add_episode(user_text=text, nova_text=safe_reply)
+    except Exception as exc:
+        print(f"[Server] Memory store error: {exc}")
 
-    await ws.send_json({"type": "response", "text": safe_reply})
+    # ── Synthesise TTS audio ──────────────────────────────────────────────────
+    audio_b64: str | None = None
+    try:
+        tts = TTS()
+        audio_bytes = await tts._synthesise(safe_reply)
+        if audio_bytes:
+            audio_b64 = base64.b64encode(audio_bytes).decode()
+    except Exception as exc:
+        print(f"[Server] TTS synthesis failed: {exc}")
+
+    # ── Send response ─────────────────────────────────────────────────────────
+    await broadcast_state("speaking")
+    payload: dict[str, Any] = {"type": "response", "text": safe_reply}
+    if audio_b64:
+        payload["audio"] = audio_b64
+    await ws.send_json(payload)
+
+    # If no audio was generated, explicitly return to idle here.
+    # When audio IS included, the frontend's AudioPlayer handles the idle transition.
+    if not audio_b64:
+        await broadcast_state("idle")
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────

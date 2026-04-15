@@ -11,16 +11,16 @@ export default defineConfig({
     proxy: {
       // Forward API calls and WebSocket to the Nova backend
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'http://localhost:8765',
         changeOrigin: true,
       },
       '/ws': {
-        target: 'ws://localhost:8000',
+        target: 'ws://localhost:8765',
         ws: true,
         changeOrigin: true,
       },
       '/health': {
-        target: 'http://localhost:8000',
+        target: 'http://localhost:8765',
         changeOrigin: true,
       },
     },
