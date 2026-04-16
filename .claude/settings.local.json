@@ -98,7 +98,10 @@
       "Bash(wait)",
       "Bash(python -m http.server 8888)",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" http://127.0.0.1:8888/ai-sast-scanner/reports/sast_report.html)",
-      "Bash(pkill -f \"python -m http.server 8888\")"
+      "Bash(pkill -f \"python -m http.server 8888\")",
+      "Bash(python3 daily_updater.py)",
+      "Bash(py daily_updater.py)",
+      "Bash(py -3 daily_updater.py)"
     ]
   }
 }
