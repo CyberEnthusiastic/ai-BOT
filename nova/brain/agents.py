@@ -12,7 +12,12 @@ from __future__ import annotations
 import re
 from typing import Any
 
-from nova.config import MOCK_MODE, OPENAI_API_KEY, OPENAI_MODEL
+from nova.config import (
+    MOCK_MODE, OPENAI_API_KEY, OPENAI_MODEL,
+    ANTHROPIC_API_KEY, CLAUDE_MODEL,
+    OLLAMA_MODEL, OLLAMA_HOST,
+    LLM_PROVIDER,
+)
 from nova.brain.system_prompt import build_system_prompt
 
 
@@ -229,8 +234,7 @@ class RealOrchestrator:
         self._agent = None
 
     def _build_agent(self) -> Any:
-        from agents import Agent  # type: ignore[import]
-        from agents.tools import function_tool  # type: ignore[import]
+        from agents import Agent, function_tool  # type: ignore[import]
 
         from nova.tools.browser_tool import BrowserTool
         from nova.tools.file_tool import FileTool
@@ -507,20 +511,15 @@ class RealOrchestrator:
         )
 
     async def run(self, user_text: str, memory_context: str = "") -> str:
-        from agents import Runner  # type: ignore[import]
+        if LLM_PROVIDER == "ollama":
+            response = await self._run_ollama(user_text, memory_context)
+        elif LLM_PROVIDER == "claude":
+            response = await self._run_claude(user_text, memory_context)
+        else:
+            response = await self._run_openai(user_text, memory_context)
 
-        if self._agent is None:
-            self._agent = self._build_agent()
-
-        # Inject fresh memory context each turn
-        self._agent.instructions = build_system_prompt(memory_context)
-        result = await Runner.run(self._agent, user_text)  # type: ignore[attr-defined]
-        response = str(result.final_output)
-
-        # ── Contact auto-save ─────────────────────────────────────────────────
         await _maybe_save_contact(response)
 
-        # ── Workflow learning: persist if multi-step ──────────────────────────
         step_markers = re.findall(r"\bStep\s+\d+\b|\d+\.\s+\w", response)
         if len(step_markers) >= 2:
             await _record_workflow(
@@ -530,6 +529,54 @@ class RealOrchestrator:
             )
 
         return response
+
+    async def _run_ollama(self, user_text: str, memory_context: str = "") -> str:
+        """Run via local Ollama — completely free, no API key needed."""
+        import httpx  # type: ignore[import]
+
+        system = build_system_prompt(memory_context)
+        payload = {
+            "model": OLLAMA_MODEL,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user_text},
+            ],
+            "stream": False,
+        }
+        async with httpx.AsyncClient(timeout=120.0) as client:
+            resp = await client.post(
+                f"{OLLAMA_HOST}/api/chat",
+                json=payload,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            return data["message"]["content"]
+
+    async def _run_claude(self, user_text: str, memory_context: str = "") -> str:
+        """Run via Anthropic Claude API (no Agents SDK needed)."""
+        import anthropic  # type: ignore[import]
+
+        client = anthropic.AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
+        system = build_system_prompt(memory_context)
+
+        message = await client.messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=2048,
+            system=system,
+            messages=[{"role": "user", "content": user_text}],
+        )
+        return message.content[0].text  # type: ignore[index]
+
+    async def _run_openai(self, user_text: str, memory_context: str = "") -> str:
+        """Run via OpenAI Agents SDK."""
+        from agents import Runner  # type: ignore[import]
+
+        if self._agent is None:
+            self._agent = self._build_agent()
+
+        self._agent.instructions = build_system_prompt(memory_context)
+        result = await Runner.run(self._agent, user_text)  # type: ignore[attr-defined]
+        return str(result.final_output)
 
 
 # ── Public factory ────────────────────────────────────────────────────────────

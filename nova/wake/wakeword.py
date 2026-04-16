@@ -1,17 +1,15 @@
-"""Wake-word detection: openwakeword (free/offline) or Porcupine (optional paid).
-
-Wake methods — controlled by WAKE_METHODS in config:
-  "voice"  — keyword engine: openwakeword (default) or porcupine
-  "clap"   — double-clap detector (ClapDetector)
-
-Both run concurrently; either fires the wake event.
+"""Wake-word detection.
 
 Engine selection — WAKEWORD_ENGINE in config:
-  "openwakeword"  — free, offline, ships with built-in models ("hey_jarvis", etc.)
-                    Set OPENWAKEWORD_MODEL to match the keyword you want.
-                    Train a custom "hey_nova" model with the openwakeword trainer:
-                    https://github.com/dscripka/openWakeWord
-  "porcupine"     — Picovoice Porcupine (requires PORCUPINE_ACCESS_KEY env var)
+  "whisper"       — FREE, listens for any custom phrase via Whisper STT (default)
+                    Set WAKEWORD_PHRASE=hey nova (or any phrase you want)
+                    No training needed — works immediately!
+  "openwakeword"  — free, offline, built-in models only (hey_jarvis, alexa, etc.)
+  "porcupine"     — Picovoice Porcupine (requires PORCUPINE_ACCESS_KEY)
+
+Wake methods — controlled by WAKE_METHODS in config:
+  "voice"  — keyword engine (whisper/openwakeword/porcupine)
+  "clap"   — double-clap detector
 
 Mock mode:
   Enter       — voice wake
@@ -27,12 +25,14 @@ import threading
 from typing import AsyncIterator
 
 from nova.config import (
+    AUDIO_INPUT_DEVICE,
     CLAP_ENABLED,
     MOCK_MODE,
     OPENWAKEWORD_MODEL,
     PORCUPINE_ACCESS_KEY,
     WAKE_METHODS,
     WAKEWORD_ENGINE,
+    WAKEWORD_PHRASE,
     WAKEWORDS_DIR,
 )
 
@@ -58,8 +58,9 @@ class WakeWordDetector:
             loop = asyncio.get_event_loop()
             if WAKEWORD_ENGINE == "porcupine":
                 await loop.run_in_executor(None, self._init_porcupine)
-            else:
+            elif WAKEWORD_ENGINE == "openwakeword":
                 await loop.run_in_executor(None, self._init_openwakeword)
+            # "whisper" engine needs no init — loads model on first detection
         return self
 
     async def __aexit__(self, *_: object) -> None:
@@ -165,7 +166,14 @@ class WakeWordDetector:
         loop = asyncio.get_event_loop()
 
         if "voice" in WAKE_METHODS:
-            if WAKEWORD_ENGINE == "porcupine" and self._porcupine:
+            if WAKEWORD_ENGINE == "whisper":
+                threading.Thread(
+                    target=self._whisper_thread,
+                    args=(loop,),
+                    daemon=True,
+                    name="nova-whisper-wake",
+                ).start()
+            elif WAKEWORD_ENGINE == "porcupine" and self._porcupine:
                 threading.Thread(
                     target=self._porcupine_thread,
                     args=(loop,),
@@ -233,6 +241,113 @@ class WakeWordDetector:
                         break
         except Exception as exc:
             print(f"[WakeWord] openwakeword thread error: {exc}")
+        finally:
+            stream.stop_stream()
+            stream.close()
+            pa.terminate()
+
+    # ── Whisper keyword thread ────────────────────────────────────────────────
+
+    def _whisper_thread(self, loop: asyncio.AbstractEventLoop) -> None:
+        """Listen for WAKEWORD_PHRASE using Whisper STT on 2-second chunks.
+
+        No training needed — works with any phrase you set in WAKEWORD_PHRASE.
+        Slightly more CPU than openwakeword but fully custom and free.
+        """
+        try:
+            import pyaudio  # type: ignore[import]
+            import numpy as np  # type: ignore[import]
+            from faster_whisper import WhisperModel  # type: ignore[import]
+            from nova.config import MODELS_DIR
+        except ImportError as exc:
+            print(f"[WakeWord] Whisper thread — missing dep: {exc}")
+            return
+
+        # Load tiny model for fast wake-word inference
+        model = WhisperModel(
+            "tiny.en",
+            device="cpu",
+            compute_type="int8",
+            download_root=str(MODELS_DIR / "whisper"),
+        )
+
+        phrase = WAKEWORD_PHRASE.lower().strip()
+
+        pa = pyaudio.PyAudio()
+        if AUDIO_INPUT_DEVICE >= 0:
+            dev_info = pa.get_device_info_by_index(AUDIO_INPUT_DEVICE)
+        else:
+            dev_info = pa.get_default_input_device_info()
+        native_rate = int(dev_info["defaultSampleRate"])
+        native_channels = min(int(dev_info["maxInputChannels"]), 2)
+
+        target_rate   = 16_000
+        chunk_seconds = 2
+        chunk_size    = native_rate * chunk_seconds
+
+        print(f"[WakeWord] Whisper engine ready — say '{phrase}' to wake Nova "
+              f"(device={AUDIO_INPUT_DEVICE}, rate={native_rate}Hz, ch={native_channels})")
+
+        open_kwargs: dict = dict(
+            rate=native_rate,
+            channels=native_channels,
+            format=pyaudio.paInt16,
+            input=True,
+            frames_per_buffer=1024,
+        )
+        if AUDIO_INPUT_DEVICE >= 0:
+            open_kwargs["input_device_index"] = AUDIO_INPUT_DEVICE
+        stream = pa.open(**open_kwargs)
+
+        import time
+        cooldown_until = 0.0
+
+        try:
+            while True:
+                frames = []
+                samples_collected = 0
+                while samples_collected < chunk_size:
+                    data = stream.read(1024, exception_on_overflow=False)
+                    frames.append(data)
+                    samples_collected += 1024
+
+                if time.time() < cooldown_until:
+                    continue
+
+                raw = b"".join(frames)
+                pcm = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768.0
+
+                if native_channels > 1:
+                    pcm = pcm.reshape(-1, native_channels).mean(axis=1)
+
+                if native_rate != target_rate:
+                    target_len = int(len(pcm) * target_rate / native_rate)
+                    pcm = np.interp(
+                        np.linspace(0, len(pcm), target_len, endpoint=False),
+                        np.arange(len(pcm)),
+                        pcm,
+                    ).astype(np.float32)
+
+                # Auto-gain: boost quiet mics so Whisper can transcribe
+                peak = float(np.abs(pcm).max())
+                if 0.01 < peak < 0.3:
+                    pcm = np.clip(pcm * (0.5 / peak), -1.0, 1.0).astype(np.float32)
+
+                segments, _ = model.transcribe(
+                    pcm,
+                    language="en",
+                    beam_size=1,
+                    vad_filter=True,
+                )
+                transcript = " ".join(s.text.strip() for s in segments).lower()
+
+                if transcript and phrase in transcript:
+                    print(f"[WakeWord] '{phrase}' detected! (heard: '{transcript.strip()}')")
+                    loop.call_soon_threadsafe(self._wake_queue.put_nowait, "voice")
+                    cooldown_until = time.time() + 3.0  # 3s cooldown
+
+        except Exception as exc:
+            print(f"[WakeWord] Whisper thread error: {exc}")
         finally:
             stream.stop_stream()
             stream.close()

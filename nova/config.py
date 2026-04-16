@@ -57,9 +57,23 @@ def _float(key: str, default: float) -> float:
 MOCK_MODE: bool = _bool("MOCK_MODE", "false")   # default live — free engines need no API keys
 NOVA_OWNER_NAME: str = os.getenv("NOVA_OWNER_NAME", "User")
 
-# ── OpenAI (required for the brain/LLM; optional for TTS) ────────────────────
+# ── OpenAI (optional — only needed if LLM_PROVIDER=openai) ──────────────────
 OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4o")
+
+# ── Anthropic / Claude (used when LLM_PROVIDER=claude) ───────────────────────
+ANTHROPIC_API_KEY: str = os.getenv("ANTHROPIC_API_KEY", "")
+CLAUDE_MODEL: str = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-6")
+
+# ── Ollama (used when LLM_PROVIDER=ollama — free, runs locally) ───────────────
+OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "llama3")
+OLLAMA_HOST: str = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+
+# ── LLM Provider ─────────────────────────────────────────────────────────────
+# "ollama"  — free, local, no API key (default)
+# "claude"  — Anthropic Claude (requires ANTHROPIC_API_KEY)
+# "openai"  — OpenAI GPT (requires OPENAI_API_KEY)
+LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "ollama")
 
 # ── ElevenLabs (optional premium TTS — falls back to edge-tts if absent) ─────
 ELEVENLABS_API_KEY: str = os.getenv("ELEVENLABS_API_KEY", "")
@@ -68,8 +82,13 @@ ELEVENLABS_VOICE_ID: str = os.getenv("ELEVENLABS_VOICE_ID", "21m00Tcm4TlvDq8ikWA
 # ── Wake-word engine ──────────────────────────────────────────────────────────
 # "openwakeword" — free, offline, no API key (default)
 # "porcupine"    — Picovoice Porcupine (requires PORCUPINE_ACCESS_KEY)
-WAKEWORD_ENGINE: str = os.getenv("WAKEWORD_ENGINE", "openwakeword")
+WAKEWORD_ENGINE: str = os.getenv("WAKEWORD_ENGINE", "whisper")
 OPENWAKEWORD_MODEL: str = os.getenv("OPENWAKEWORD_MODEL", "hey_jarvis")
+# Custom wake phrase for WAKEWORD_ENGINE=whisper (any phrase you want!)
+WAKEWORD_PHRASE: str = os.getenv("WAKEWORD_PHRASE", "hey nova")
+# Mic device index — run: python -c "import pyaudio; ..." to list devices
+# -1 = system default
+AUDIO_INPUT_DEVICE: int = int(os.getenv("AUDIO_INPUT_DEVICE", "-1"))
 # ^ Built-in models shipped with openwakeword.  Train a custom "hey_nova" model
 #   and set OPENWAKEWORD_MODEL=hey_nova to use it.
 
