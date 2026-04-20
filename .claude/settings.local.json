@@ -101,7 +101,12 @@
       "Bash(pkill -f \"python -m http.server 8888\")",
       "Bash(python3 daily_updater.py)",
       "Bash(py daily_updater.py)",
-      "Bash(py -3 daily_updater.py)"
+      "Bash(py -3 daily_updater.py)",
+      "Bash(py --version)",
+      "Bash(where python3:*)",
+      "Bash(ls /c/Python*/python.exe)",
+      "Read(//c/Users/vmnad/AppData/Local/Programs/Python/**)",
+      "Bash(\"C:\\\\Users\\\\vmnad\\\\OneDrive\\\\Documents\\\\Cyber github\\\\ai-BOT\\\\.venv\\\\Scripts\\\\python.exe\" daily_updater.py)"
     ]
   }
 }
