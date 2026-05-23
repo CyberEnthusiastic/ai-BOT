@@ -106,7 +106,23 @@
       "Bash(where python3:*)",
       "Bash(ls /c/Python*/python.exe)",
       "Read(//c/Users/vmnad/AppData/Local/Programs/Python/**)",
-      "Bash(\"C:\\\\Users\\\\vmnad\\\\OneDrive\\\\Documents\\\\Cyber github\\\\ai-BOT\\\\.venv\\\\Scripts\\\\python.exe\" daily_updater.py)"
+      "Bash(\"C:\\\\Users\\\\vmnad\\\\OneDrive\\\\Documents\\\\Cyber github\\\\ai-BOT\\\\.venv\\\\Scripts\\\\python.exe\" daily_updater.py)",
+      "Bash(git credential *)",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" auth git-credential get)",
+      "PowerShell(cmdkey /list)",
+      "PowerShell(cmdkey /delete:\"git:https://github.com\")",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import subprocess; r = subprocess.run\\(['gh', 'auth', 'token'], capture_output=True, text=True\\); print\\(r.stdout.strip\\(\\)[:20]\\)\")",
+      "Bash(python -c \"import subprocess; r = subprocess.run\\(['gh', 'config', 'list'], capture_output=True, text=True\\); print\\(r.stdout[:500]\\)\")",
+      "Bash(python -c \"import subprocess; r = subprocess.run\\(['gh', 'auth', 'status', '--show-token'], capture_output=True, text=True\\); print\\(r.stdout[:500]\\); print\\('ERR:', r.stderr[:500]\\)\")",
+      "PowerShell(Get-Content \"$env:LOCALAPPDATA\\\\GitHub CLI\\\\hosts.yml\" -ErrorAction SilentlyContinue; Write-Host \"===\"; Get-Content \"$env:APPDATA\\\\GitHub CLI\\\\hosts.yml\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\\\\GitHub CLI\\\\\" -ErrorAction SilentlyContinue; Write-Host \"===\"; Get-ChildItem \"$env:APPDATA\\\\GitHub CLI\\\\\" -ErrorAction SilentlyContinue)",
+      "Bash(python -c \"import subprocess; r = subprocess.run\\(['where', 'gh'], capture_output=True, text=True, shell=True\\); print\\(r.stdout\\)\")",
+      "Bash(python -c \"import os; keys = ['HOMEDRIVE','HOMEPATH','HOME','USERNAME','USERDOMAIN','USERPROFILE','APPDATA','LOCALAPPDATA']; [print\\(k+'='+os.environ.get\\(k,'NOT SET'\\)\\) for k in keys]\")",
+      "Bash(python -c \"import os; [print\\(k+'='+v\\) for k,v in os.environ.items\\(\\) if 'GH' in k or 'GITHUB' in k or 'TOKEN' in k.upper\\(\\)]\")",
+      "Bash(gh --version)",
+      "Bash(python -c \"import subprocess; r=subprocess.run\\(['gh','--version'],capture_output=True,text=True\\); print\\(r.stdout[:100]\\)\")",
+      "Bash(python -c \"import subprocess; r = subprocess.run\\(['gh', 'auth', 'status'], capture_output=True, text=True\\); print\\(r.stdout\\); print\\(r.stderr\\)\")"
     ]
   }
 }
